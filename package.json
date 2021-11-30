@@ -1,0 +1,11 @@
+{
+  "name": "cabin-design-system",
+  "version": "0.0.1",
+  "description": "Design system for CabinDAO",
+  "main": "index.js",
+  "author": "CabinDAO",
+  "repository": "git@github.com:CabinDAO/design-system.git",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/theme", "packages/components"]
+}
