@@ -9,9 +9,9 @@ the arrangement of the natural and artificial physical features of an area.
 
 ## Quick Links
 
-- [🐞 Report a Bug](https://github.com/CabinDAO/Passports/issues/new)
-- [❓ Ask a question](https://github.com/CabinDAO/Passports/discussions)
-- [🙋 Start contributing](https://github.com/CabinDAO/Passports/blob/main/CONTRIBUTING.md)
+- [🐞 Report a Bug](https://github.com/CabinDAO/design-system/issues/new)
+- [❓ Ask a question](https://github.com/CabinDAO/design-system/discussions)
+- [🙋 Start contributing](https://github.com/CabinDAO/design-system/blob/main/CONTRIBUTING.md)
 
 
 ## Topo: The CabinDAO Design System
