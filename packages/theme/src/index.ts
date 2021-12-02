@@ -21,20 +21,26 @@ const spacing = {
 
 export const theme = {
   colors: {
-    sand: "#FDF3E7",
     forest: "#324841",
-    sprout: "#00FF47",
+    sand: "#FDF3E7",
     wheat: "#FDC67B",
-  },
-  fonts: {
-    sans: "Poppins, -apple-system, system-ui, sans-serif",
-    mono: "IBM Plex Mono, menlo, monospace",
+    sprout: "#00FF47",
+    sky: "#ACE1FF",
+    primary: "$forest",
+    secondary: "$sand",
+    tertiary: "$wheat",
+    accent1: "$sprout",
+    accent2: "$sky",
   },
   space: {
     ...spacing,
   },
   sizes: {
     ...spacing,
+  },
+  fonts: {
+    sans: "Poppins, -apple-system, system-ui, sans-serif",
+    mono: "IBM Plex Mono, menlo, monospace",
   },
   fontSizes: {
     xs: "0.75rem",
@@ -44,6 +50,15 @@ export const theme = {
     xl: "1.25rem",
     xxl: "1.5rem",
     xxxl: "2rem",
+  },
+  fontWeights: {
+    lighest: 200,
+    lighter: 300,
+    light: 400,
+    regular: 500,
+    bold: 600,
+    bolder: 700,
+    boldest: 800
   },
   borderWidths: {
     px: "1px",
