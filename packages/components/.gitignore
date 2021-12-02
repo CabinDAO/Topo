@@ -102,6 +102,7 @@ sketch
 # website: https://storybook.js.org/
 
 storybook-static/
+public/
 
 ### Rollup / NPM Package ###
 lib
