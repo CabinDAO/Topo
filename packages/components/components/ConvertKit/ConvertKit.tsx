@@ -9,6 +9,9 @@ const ConvertKit = ({ id }: { id: string }): React.ReactElement => {
       script.id = id;
       document.head.appendChild(script);
     }
+    return () => {
+      document.getElementById(id)?.remove?.();
+    }
   }, [id]);
   return <script data-uid={id} />;
 };

@@ -5,7 +5,7 @@ import ConvertKit from "./ConvertKit";
 import { Box } from "../";
 
 export default {
-  title: "Components/Hero",
+  title: "Components/ConvertKit",
   component: ConvertKit,
   argTypes: {},
 } as Meta;
