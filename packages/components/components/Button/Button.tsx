@@ -30,9 +30,6 @@ const ButtonContainer = styled("button", {
   fontWeight: 600,
   border: "none",
   fontSize: "$sm",
-  height: '$10',
-  py: 0,
-  px: '$4',
   transition: "all 0.2s ease-in-out",
   textDecoration: "none",
   boxSizing: "border-box",
@@ -45,14 +42,23 @@ const ButtonContainer = styled("button", {
     type: {
       primary: {
         border: "none",
+        height: '$10',
+        py: 0,
+        px: '$4',
       },
       secondary: {
         borderStyle: "solid",
         borderWidth: "1px",
+        height: '$10',
+        py: 0,
+        px: '$4',
       },
       link: {
         borderStyle: "solid",
         borderWidth: "1px",
+        background: "transparent",
+        border: "none",
+        p: 0,
       },
     },
     tone: {
@@ -113,6 +119,20 @@ const ButtonContainer = styled("button", {
         "&:hover": {
           boxShadow: "0px 0px 0px 1px $colors$wheat",
         },
+      },
+    },
+    {
+      type: "link",
+      tone: "forest",
+      css: {
+        color: "$forest",
+      },
+    },
+    {
+      type: "link",
+      tone: "wheat",
+      css: {
+        color: "$wheat",
       },
     },
   ],

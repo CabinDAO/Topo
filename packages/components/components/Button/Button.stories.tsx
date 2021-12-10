@@ -27,3 +27,6 @@ Primary.args = {};
 
 export const Secondary = Template.bind({});
 Secondary.args = { type: "secondary" };
+
+export const Link = Template.bind({});
+Secondary.args = { type: "link" };
