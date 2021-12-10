@@ -1,207 +1,141 @@
-import React, { FC } from "react";
+import React from "react";
 import { styled } from "../../stitches.config";
 
 export interface IButtonProps {
   as?: "button" | "a";
-  type?: "primary" | "secondary" | "tertiary" | "accent1" | "accent2";
-  outline?: boolean;
-  ghost?: boolean;
+  type?: "primary" | "secondary" | "link";
+  tone?: "forest" | "wheat";
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   children?: string | React.ReactNode;
   href?: string;
+  tabIndex?: number;
+  disabled?: boolean;
 }
 
-const Button = ({ leftIcon, rightIcon, children, ...props }: IButtonProps) => {
-  return <ButtonContainer {...props}>
-    {leftIcon}
+const Button = ({ leftIcon, rightIcon, children, as = "button", ...props }: IButtonProps) => {
+  return <ButtonContainer as={as} {...props}>
+    {leftIcon && <Icon left>{leftIcon}</Icon>}
     {children}
-    {rightIcon}
+    {rightIcon && <Icon right>{rightIcon}</Icon>}
   </ButtonContainer>
 }
 
 const ButtonContainer = styled("button", {
-  display: "flex",
+  display: "inline-flex",
+  flexGrow: 0,
   justifyContent: "center",
   alignItems: "center",
   fontFamily: "$sans",
   fontWeight: 600,
   border: "none",
   fontSize: "$sm",
-  padding: "$4 $10",
+  height: '$10',
+  py: 0,
+  px: '$4',
   transition: "all 0.2s ease-in-out",
   textDecoration: "none",
-  svg: { 
-    height: '$5',
-    width: '$5',
-    mr: '$2',
-    position: 'relative',
-    left: '0',
-  },
-  "svg:first-child": {
-    mr: "$2",
-  },
-  "svg:last-child": {
-    ml: "$2",
-  },
+  boxSizing: "border-box",
+  cursor: "pointer",
   defaultVariants: {
     type: "primary",
+    tone: "forest",
   },
   variants: {
     type: {
       primary: {
-        backgroundColor: "$primary",
-        color: "$sand",
+        border: "none",
       },
       secondary: {
-        backgroundColor: "$secondary",
-        color: "$forest",
+        borderStyle: "solid",
+        borderWidth: "1px",
       },
-      tertiary: {
-        backgroundColor: "$tertiary",
-        color: "$forest",
-      },
-      accent1: {
-        backgroundColor: "$accent1",
-        color: "$forest",
-      },
-      accent2: {
-        backgroundColor: "$accent2",
-        color: "$forest",
+      link: {
+        borderStyle: "solid",
+        borderWidth: "1px",
       },
     },
-    outline: {
-      true: {
-        boxSizing: "border-box",
+    tone: {
+      forest: {
+      },
+      wheat: {
       },
     },
-    ghost: {
+    disabled: {
       true: {
-        borderStyle: "none",
-        "&:hover": {
-          backgroundColor: "rgba($primary, 0.2)",
-        },
+        opacity: "0.6",
+        cursor: "not-allowed",
       },
-      false: {},
     },
   },
   compoundVariants: [
     {
       type: "primary",
-      ghost: true,
+      tone: "forest",
       css: {
-        backgroundColor: "unset",
-        color: "$primary",
+        backgroundColor: "$forest",
+        color: "$sand",
+        "&:hover": {
+          boxShadow: "0px 0px 0px 1px $colors$forest",
+        },
       },
     },
     {
       type: "primary",
-      outline: true,
+      tone: "wheat",
       css: {
-        backgroundColor: "unset",
-        color: "$primary",
-        borderColor: "$primary",
-        borderStyle: "solid",
-        boxSizing: "border-box",
+        backgroundColor: "$wheat",
+        color: "$forest",
         "&:hover": {
-          backgroundColor: "$primary",
-          color: "$sand",
+          boxShadow: "0px 0px 0px 1px $colors$wheat",
         },
       },
     },
     {
       type: "secondary",
-      ghost: true,
+      tone: "forest",
       css: {
-        backgroundColor: "unset",
-        color: "$secondary",
+        color: "$forest",
+        borderColor: "$forest",
+        backgroundColor: "transparent",
+        "&:hover": {
+          boxShadow: "0px 0px 0px 1px $colors$forest",
+        },
       },
     },
     {
       type: "secondary",
-      outline: true,
+      tone: "wheat",
       css: {
-        backgroundColor: "unset",
-        color: "$secondary",
-        borderColor: "$secondary",
-        borderStyle: "solid",
-        boxSizing: "border-box",
+        color: "$wheat",
+        borderColor: "$wheat",
+        backgroundColor: "transparent",
         "&:hover": {
-          backgroundColor: "$secondary",
-          color: "$forest",
-        },
-      },
-    },
-    {
-      type: "tertiary",
-      ghost: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$tertiary",
-      },
-    },
-    {
-      type: "tertiary",
-      outline: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$tertiary",
-        borderColor: "$tertiary",
-        borderStyle: "solid",
-        boxSizing: "border-box",
-        "&:hover": {
-          backgroundColor: "$tertiary",
-          color: "$forest",
-        },
-      },
-    },
-    {
-      type: "accent1",
-      ghost: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$accent1",
-      },
-    },
-    {
-      type: "accent1",
-      outline: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$accent1",
-        borderColor: "$accent1",
-        borderStyle: "solid",
-        boxSizing: "border-box",
-        "&:hover": {
-          backgroundColor: "$accent1",
-          color: "$forest",
-        },
-      },
-    },
-    {
-      type: "accent2",
-      ghost: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$accent2",
-      },
-    },
-    {
-      type: "accent2",
-      outline: true,
-      css: {
-        backgroundColor: "unset",
-        color: "$accent2",
-        borderColor: "$accent2",
-        borderStyle: "solid",
-        boxSizing: "border-box",
-        "&:hover": {
-          backgroundColor: "$accent2",
-          color: "$forest",
+          boxShadow: "0px 0px 0px 1px $colors$wheat",
         },
       },
     },
   ],
+});
+
+const Icon = styled("div", {
+  height: '$5',
+  svg: {
+    height: '$5',
+    width: '$5',
+  },
+  variants: {
+    left: {
+      true: {
+        mr: '$2',
+      },
+    },
+    right: {
+      true: {
+        ml: '$2',
+      },
+    },
+  },
 });
 
 export default Button;
