@@ -35,6 +35,9 @@ export const fontStyles = {
   accent: {
     color: "$accent1",
   },
+  plain: {
+    color: "$black",
+  },
 };
 
 export const commonTextVariants = {
