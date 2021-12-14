@@ -1,5 +1,5 @@
 {
-  "name": "cabin-design-system",
+  "name": "@cabindao/topo",
   "version": "0.0.1",
   "description": "Components for the CabinDAO design system",
   "main": "index.js",
