@@ -34,7 +34,7 @@
     "@radix-ui/react-icons": "^1.0.3",
     "@stitches/react": "^1.2.5",
     "hygen": "^6.1.0",
-    "topo-theme": "*"
+    "topo-theme": "^0.0.3"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
