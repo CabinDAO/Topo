@@ -17,8 +17,8 @@ jobs:
       - name: build
         run: yarn workspace @cabindao/topo-theme build
       - uses: JS-DevTools/npm-publish@v1
-        working-directory: packages/theme
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
           check-version: false
+          package: ./packages/components/package.json
