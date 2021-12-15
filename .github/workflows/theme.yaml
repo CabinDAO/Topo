@@ -1,4 +1,4 @@
-name: Publish package
+name: Publish Topo-Theme
 on:
   push:
     branches: main
@@ -23,4 +23,4 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
           check-version: false
-          package: ./packages/components/package.json
+          package: ./packages/topo-theme/package.json

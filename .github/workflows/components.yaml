@@ -1,4 +1,4 @@
-name: Publish package
+name: Publish Topo
 on:
   push:
     branches: main
