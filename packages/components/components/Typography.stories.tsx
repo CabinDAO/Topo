@@ -2,7 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { styled } from "../stitches.config";
-import { theme } from "topo-theme";
+import { theme } from "@cabindao/topo-theme";
 import { Box, Text, Heading } from "./";
 
 export default {
