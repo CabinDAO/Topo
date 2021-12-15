@@ -23,4 +23,4 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
           check-version: false
-          package: ./packages/topo-theme/package.json
+          package: ./packages/theme/package.json
