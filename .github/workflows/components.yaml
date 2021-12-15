@@ -16,6 +16,8 @@ jobs:
         run: npm install
       - name: yarn
         run: yarn
+      - name: build theme
+        run: yarn workspace @cabindao/topo-theme build:npm
       - name: build
         run: yarn workspace @cabindao/topo build:npm
       - uses: JS-DevTools/npm-publish@v1
