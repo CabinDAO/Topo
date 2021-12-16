@@ -14,6 +14,7 @@ const Preview = styled("div", {
   color: "$forest",
   backgroundColor: '$sand',
   p: "$10",
+  br: "$1",
 });
 
 export const parameters = {
