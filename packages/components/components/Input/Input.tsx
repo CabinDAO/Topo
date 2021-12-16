@@ -32,7 +32,7 @@ const Input = ({ label, description, required, error, ...props }: IInputProps) =
 
 const InputContainer = styled("input", {
   display: "flex",
-  my: "$2",
+  flex: 1,
   borderStyle: "solid",
   borderWidth: "1px",
   borderColor: "$forest",

@@ -17,7 +17,7 @@ const Input = ({ label, description, required, error, children }: ILabelProps) =
         {required && <Required>(Required)</Required>}
       </LabelRow>
       {description && <Description>{description}</Description>}
-      {children}
+      <ChildContainer>{children}</ChildContainer>
       {error && <Error>{error}</Error>}
     </Container>
   );
@@ -53,6 +53,13 @@ const Description = styled("div", {
   fontFamily: "$sans",
   fontSize: "$sm",
   mb: "$1",
+});
+
+const ChildContainer = styled("div", {
+  fontFamily: "$sans",
+  fontSize: "$sm",
+  my: "$1",
+  display: "flex",
 });
 
 const Error = styled("div", {
