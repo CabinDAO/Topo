@@ -11,6 +11,7 @@ export interface IButtonProps {
   href?: string;
   tabIndex?: number;
   disabled?: boolean;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 const Button = ({ leftIcon, rightIcon, children, as = "button", ...props }: IButtonProps) => {
