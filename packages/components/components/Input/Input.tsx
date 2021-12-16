@@ -24,7 +24,8 @@ const Input = ({ label, description, required, error, ...props }: IInputProps) =
       error={error}
     >
       <InputContainer 
-        {...props}
+        {...props }
+        error={!!error}
       />
     </Label>
   );
@@ -61,6 +62,14 @@ const InputContainer = styled("input", {
         backgroundColor: "#FFEED9",
         "&:focus": {
           boxShadow: "none",
+        },
+      },
+    },
+    error: {
+      true: {
+        borderColor: "#FF0000",
+        "&:focus": {
+          boxShadow: "0px 0px 0px 1px #FF0000",
         },
       },
     },
