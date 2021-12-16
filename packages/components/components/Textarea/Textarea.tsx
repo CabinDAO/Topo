@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "../../stitches.config";
 import Label from "../Label";
 
-export interface IInputProps {
+export interface ITextareaProps {
   tabIndex?: number;
   disabled?: boolean;
   placeholder?: string;
@@ -15,7 +15,7 @@ export interface IInputProps {
   error?: string;
 }
 
-const Input = ({ label, description, required, error, ...props }: IInputProps) => {
+const Textarea = ({ label, description, required, error, ...props }: ITextareaProps) => {
   return (
     <Label 
       label={label} 
@@ -23,7 +23,7 @@ const Input = ({ label, description, required, error, ...props }: IInputProps) =
       required={required}
       error={error}
     >
-      <InputContainer 
+      <TextareaContainer 
         {...props }
         error={!!error}
       />
@@ -31,15 +31,15 @@ const Input = ({ label, description, required, error, ...props }: IInputProps) =
   );
 }
 
-const InputContainer = styled("input", {
+const TextareaContainer = styled("textarea", {
   fontFamily: "$sans",
   display: "flex",
   flex: 1,
   borderStyle: "solid",
   borderWidth: "1px",
   borderColor: "$forest",
-  height: '$10',
-  py: 0,
+  minHeight: '$32',
+  py: '$3',
   px: '$3',
   fontSize: "$base",
   color: "$forest",
@@ -77,4 +77,4 @@ const InputContainer = styled("input", {
   },
 });
 
-export default Input;
+export default Textarea;
