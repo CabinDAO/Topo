@@ -24,6 +24,8 @@ const Input = ({ label, description, required, error, children }: ILabelProps) =
 }
 
 const Container = styled("div", {
+  display: "flex",
+  flexDirection: "column",
 });
 
 const LabelRow = styled("div", {
@@ -59,6 +61,5 @@ const Error = styled("div", {
   color: "#FF0000",
   mt: "$1",
 });
-
 
 export default Input;

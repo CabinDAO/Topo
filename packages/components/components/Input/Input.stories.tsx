@@ -1,26 +1,25 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Label, { ILabelProps } from "./Label";
+import Input, { IInputProps } from "./Input";
 import { Box, Heading } from "../";
 
 export default {
-  title: "Components/Label",
-  component: Label,
+  title: "Components/Input",
+  component: Input,
   argTypes: {},
   args: {
     label: "Label text",
     description: null,
     required: false,
     error: null,
+    placeholder: "Placeholder text",
   },
 } as Meta;
 
 const Template: Story = (args) => (
   <Box>
-    <Label {...args}>
-
-    </Label>
+    <Input {...args} />
   </Box>
 );
 
