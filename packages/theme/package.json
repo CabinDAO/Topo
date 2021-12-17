@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo-theme",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Topo theme for the CabinDAO design system",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -22,5 +22,8 @@
   },
   "scripts": {
     "build:npm": "rollup -c"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }

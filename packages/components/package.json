@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Components for the CabinDAO design system",
   "main": "index.js",
   "module": "lib/index.js",
@@ -42,5 +42,8 @@
     "storybook": "start-storybook -p 6006",
     "build": "build-storybook -o public",
     "build:npm": "rollup -c"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }
