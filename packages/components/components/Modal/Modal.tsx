@@ -48,10 +48,6 @@ const ModalTitle = styled("span", {
   fontFamily: "$mono",
   color: "$sand",
 });
-const CloseButton = styled(Button, {
-  height: "32px !important",
-  width: 32,
-});
 const ModalContent = styled("div", { padding: 40, fontFamily: "$sans" });
 const ModalFooter = styled("div", { display: "flex", justifyContent: "right" });
 const ConfirmButton = styled(Button, {
@@ -97,9 +93,9 @@ const Modal: React.FC<{
           <ModalBody>
             <ModalHeader>
               <ModalTitle>{title}</ModalTitle>
-              <CloseButton tone="wheat" onClick={close}>
+              <Button tone="wheat" onClick={close} type="icon">
                 <CloseIcon />
-              </CloseButton>
+              </Button>
             </ModalHeader>
             <ModalContent>
               {children}

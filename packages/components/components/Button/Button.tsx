@@ -3,7 +3,7 @@ import { styled } from "../../stitches.config";
 
 export interface IButtonProps {
   as?: "button" | "a";
-  type?: "primary" | "secondary" | "link";
+  type?: "primary" | "secondary" | "link" | "icon";
   tone?: "forest" | "wheat";
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -60,6 +60,12 @@ const ButtonContainer = styled("button", {
         background: "transparent",
         border: "none",
         p: 0,
+      },
+      icon: {
+        border: "none",
+        p: 0,
+        height: '$8',
+        width: '$8',
       },
     },
     tone: {
@@ -134,6 +140,28 @@ const ButtonContainer = styled("button", {
       tone: "wheat",
       css: {
         color: "$wheat",
+      },
+    },
+    {
+      type: "icon",
+      tone: "forest",
+      css: {
+        backgroundColor: "$forest",
+        color: "$sand",
+        "&:hover": {
+          boxShadow: "0px 0px 0px 1px $colors$forest",
+        },
+      },
+    },
+    {
+      type: "icon",
+      tone: "wheat",
+      css: {
+        backgroundColor: "$wheat",
+        color: "$forest",
+        "&:hover": {
+          boxShadow: "0px 0px 0px 1px $colors$wheat",
+        },
       },
     },
   ],
