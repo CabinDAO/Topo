@@ -220,6 +220,8 @@ $RECYCLE.BIN/
 
 # and uncomment the following lines
 # .pnp.*
+/index.js
+/index.js.map
 
 # End of
 # https://www.toptal.com/developers/gitignore/api/react,yarn,storybookjs,vim,emacs,windows,macos,visualstudiocode,sublimetextgg
