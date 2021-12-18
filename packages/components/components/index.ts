@@ -6,6 +6,8 @@ import Box from "./Box";
 import Button from "./Button";
 import ConvertKit from "./ConvertKit";
 import Hero from "./Hero";
+import Input from "./Input";
+import Label from "./Label";
 import Modal from "./Modal";
 import Wrapper from "./Wrapper";
 
@@ -19,6 +21,9 @@ export {
   Button,
   ConvertKit,
   Hero,
+  Input,
+  Label,
+
   Modal,
   Wrapper,
 };

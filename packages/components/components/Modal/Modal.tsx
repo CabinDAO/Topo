@@ -32,7 +32,6 @@ const ModalBody = styled("div", {
   background: "$sand",
 });
 const ModalHeader = styled("div", {
-  height: 32,
   backgroundColor: "$forest",
   paddingTop: 12,
   paddingLeft: 40,
