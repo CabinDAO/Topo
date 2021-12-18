@@ -1,6 +1,6 @@
 import React from "react";
 import {styled} from "../../stitches.config";
-import Text from "../Text/Text";
+import Text from "../Text";
 
 const Tag = styled("div", {
   br: "$pill",
@@ -34,9 +34,7 @@ function HandleTag({
   return (
     <Tag className={className}>
       <Avatar src={avatar} />
-      <Text tight type="plain">
-        {children}
-      </Text>
+      <Text tight>{children}</Text>
     </Tag>
   );
 }
@@ -46,11 +44,18 @@ export default styled(HandleTag, {
     bg: {
       light: {
         borderColor: "rgba(0,0,0,0.25)",
+        [`& ${Text}`]: {
+          color: "$forest",
+        }
       },
-      dark: {},
+      dark: {
+        [`& ${Text}`]: {
+          color: "$sand",
+        }
+      },
     },
   },
   defaultVariants: {
-    bg: "dark",
+    bg: "light",
   },
 });

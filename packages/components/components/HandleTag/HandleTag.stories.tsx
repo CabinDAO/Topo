@@ -12,7 +12,7 @@ export default {
 export const Default = (args: {avatar: string}) => (
   <Box>
     <Box style={{backgroundColor: "#324841", padding: 24}}>
-      <HandleTag {...args}>Dark Background</HandleTag>
+      <HandleTag {...args} bg="dark">Dark Background</HandleTag>
     </Box>
     <Box style={{backgroundColor: "#fff", padding: 24}}>
       <HandleTag {...args} bg="light">
