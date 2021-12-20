@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Input, { IInputProps } from "./Input";
-import { Box, Heading } from "../";
+import Input from "./Input";
+import { Box } from "../";
 
 export default {
   title: "Components/Input",

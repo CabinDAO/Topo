@@ -9,6 +9,7 @@ import Hero from "./Hero";
 import Input from "./Input";
 import Label from "./Label";
 import Modal from "./Modal";
+import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
 
 // prettier-ignore
@@ -25,5 +26,6 @@ export {
   Label,
 
   Modal,
+  Textarea,
   Wrapper,
 };

@@ -10,7 +10,7 @@ export interface IInputProps {
   name?: string;
   value?: string;
   description?: string;
-  onChange?: () => void;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>
   required?: boolean;
   error?: string;
 }

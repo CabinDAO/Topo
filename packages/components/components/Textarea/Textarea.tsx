@@ -10,7 +10,7 @@ export interface ITextareaProps {
   name?: string;
   value?: string;
   description?: string;
-  onChange?: () => void;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>
   required?: boolean;
   error?: string;
 }
