@@ -2,17 +2,10 @@ import React from "react";
 import { styled } from "../../stitches.config";
 import Label from "../Label";
 
-export interface IInputProps {
-  tabIndex?: number;
-  disabled?: boolean;
-  placeholder?: string;
-  label?: string;
-  name?: string;
-  value?: string;
-  description?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>
-  required?: boolean;
-  error?: string;
+type LabelProps = Parameters<typeof Label>[0];
+type InputContainerProps = Omit<Parameters<typeof InputContainer>[0], 'css' | 'error'>
+
+export interface IInputProps extends InputContainerProps, LabelProps {
 }
 
 const Input = ({ label, description, required, error, ...props }: IInputProps) => {
