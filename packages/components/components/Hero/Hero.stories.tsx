@@ -24,7 +24,7 @@ Primary.args = {
       {...props}
       alt={"A real biew of a cabin"}
       src={
-        "https://www.creatorcabins.com/_next/image?url=%22F_next%2Fstatic%2Fmedia%2FheroImage.fc0d8fa3.jpg&w=3840&q=75"
+        "https://via.placeholder.com/984x464"
       }
     />
   ),

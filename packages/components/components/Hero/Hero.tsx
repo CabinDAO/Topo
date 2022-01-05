@@ -59,4 +59,7 @@ const Frame = styled("div", {
   "@md": {
     br: "$3",
   },
+  img: {
+    width: "100%",
+  },
 });
