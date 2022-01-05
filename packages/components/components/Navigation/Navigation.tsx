@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from 'react'
+import React, { useState } from "react";
 import { styled } from "../../stitches.config";
 import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons'
 import Button from '../Button';
@@ -9,7 +8,7 @@ export interface INavigationProps {
   links?: { label: string, href: string }[];
 }
 
-export default function Header({ links }: INavigationProps) {
+export default function Navigation({ links }: INavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const nav = (
