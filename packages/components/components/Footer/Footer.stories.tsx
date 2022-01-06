@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import { Box } from "../";
 
 export default {
-  title: "Components/Footer",
+  title: "Layout/Footer",
   component: Footer,
   argTypes: {},
   args: {

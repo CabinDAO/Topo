@@ -5,7 +5,7 @@ import CallToAction, { ICallToActionProps } from "./CallToAction";
 import { Box } from "../";
 
 export default {
-  title: "Components/CallToAction",
+  title: "Layout/CallToAction",
   component: CallToAction,
   argTypes: {},
   args: {

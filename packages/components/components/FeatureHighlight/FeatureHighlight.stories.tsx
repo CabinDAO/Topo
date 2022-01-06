@@ -5,7 +5,7 @@ import FeatureHighlight, { IFeatureHighlightProps } from "./FeatureHighlight";
 import { Box } from "../";
 
 export default {
-  title: "Components/FeatureHighlight",
+  title: "Layout/FeatureHighlight",
   component: FeatureHighlight,
   argTypes: {},
 } as Meta;

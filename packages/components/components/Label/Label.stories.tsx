@@ -5,7 +5,7 @@ import Label from "./Label";
 import { Box } from "../";
 
 export default {
-  title: "Components/Label",
+  title: "Forms/Label",
   component: Label,
   argTypes: {},
   args: {

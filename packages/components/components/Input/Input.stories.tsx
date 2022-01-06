@@ -5,7 +5,7 @@ import Input from "./Input";
 import { Box } from "../";
 
 export default {
-  title: "Components/Input",
+  title: "Forms/Input",
   component: Input,
   argTypes: {},
   args: {

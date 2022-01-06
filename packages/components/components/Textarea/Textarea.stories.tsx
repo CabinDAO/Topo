@@ -5,7 +5,7 @@ import Textarea, { ITextareaProps } from "./Textarea";
 import { Box, Heading } from "../";
 
 export default {
-  title: "Components/Textarea",
+  title: "Forms/Textarea",
   component: Textarea,
   argTypes: {},
   args: {

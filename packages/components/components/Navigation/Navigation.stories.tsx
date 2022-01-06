@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 import { Box } from "../";
 
 export default {
-  title: "Components/Navigation",
+  title: "Layout/Navigation",
   component: Navigation,
   argTypes: {},
   args: {
