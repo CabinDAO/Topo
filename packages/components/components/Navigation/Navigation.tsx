@@ -12,9 +12,11 @@ export default function Navigation({ links }: INavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const nav = (
-    <Nav>   
+    <Nav>  
       {links && links.map(({ label, href }, i) => (
-        <a href={href} key={i}>{label}</a>
+        label && href && (
+          <a href={href} key={i}>{label}</a>
+        )
       ))}
     </Nav>
   );

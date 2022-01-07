@@ -2,30 +2,18 @@ import React from "react";
 import { styled } from "../../stitches.config";
 import Wrapper from "../Wrapper";
 
-export default function Footer() {
+export interface IFooterProps {
+  links?: { label: string, href: string }[];
+}
+
+export default function Footer({ links }: IFooterProps) {
   const nav = (
     <Nav>
-      <a target="_blank" rel="noreferrer" href="https://app.clarity.so/%E2%82%A1ABIN">
-        Wiki
-      </a>
-      <a target="_blank" rel="noreferrer" href="https://creators.mirror.xyz/">
-        Mirror
-      </a>
-      <a target="_blank" rel="noreferrer" href="https://discord.gg/N6hVmFygjR">
-        Discord
-      </a>
-      <a target="_blank" rel="noreferrer" href="https://snapshot.org/#/cabindao.eth">
-        Snapshot
-      </a>
-      <a target="_blank" rel="noreferrer" href="https://github.com/CabinDAO">
-        Github
-      </a>
-      <a target="_blank" rel="noreferrer" href="https://twitter.com/creatorcabins">
-        Twitter
-      </a>  
-      <a target="_blank" rel="noreferrer" href="https://www.instagram.com/creatorcabins/">
-        Instagram
-      </a>  
+      {links && links.map(({ label, href }, i) => (
+        label && href && (
+          <a href={href} key={i}>{label}</a>
+        )
+      ))}
     </Nav>
   ); 
 

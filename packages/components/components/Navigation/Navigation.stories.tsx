@@ -27,4 +27,5 @@ Standard.args = {
     { label: "Community", href: "/#community" },
     { label: "Initiatives", href: "/#initiatives" },
     { label: "Passports", href: "/#passports" },
-  ],};
+  ],
+};
