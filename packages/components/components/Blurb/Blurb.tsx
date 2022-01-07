@@ -20,9 +20,11 @@ export default function Blurb({ heading, body, link }: IBlurbProps) {
           </h2>
           <div>
             <p>{body}</p>
-            {link && 
+            {link && link.href && 
               <Button as="a" type="link" href="https://creators.mirror.xyz/-lNPJRz2GLWIcsuMTZqklGNEWRrY7Nk0Y33Qn6Lw4q4"
-              leftIcon={<ArrowRightIcon />}>{link.label}</Button>
+              leftIcon={<ArrowRightIcon />}>
+                {link.label ? link.label : "Learn more"}
+              </Button>
             }
           </div>
         </Content>

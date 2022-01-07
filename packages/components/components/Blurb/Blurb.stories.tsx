@@ -29,7 +29,7 @@ Standard.args = {};
 export const WithLink = Template.bind({});
 WithLink.args = {
   link: {
-    label: "Primary link",
+    label: "Link",
     href: "/#primary",
   },
 };
