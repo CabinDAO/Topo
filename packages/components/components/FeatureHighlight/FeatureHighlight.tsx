@@ -37,7 +37,7 @@ export default function FeatureHighlight({
             {link && link.href && 
               <Button as="a" type="link" href="https://creators.mirror.xyz/-lNPJRz2GLWIcsuMTZqklGNEWRrY7Nk0Y33Qn6Lw4q4"
               leftIcon={<ArrowRightIcon />}>
-                {link.label ? link.label : "Learn more"}
+                {link.label || "Learn more"}
               </Button>
             }
           </Text>
