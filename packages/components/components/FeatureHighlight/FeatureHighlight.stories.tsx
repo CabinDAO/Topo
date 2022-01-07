@@ -42,6 +42,34 @@ Standard.args = {
   ),
 };
 
+export const WithLink = Template.bind({});
+WithLink.args = {
+  heading: "Hello Topo",
+  body: "Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+  link: {
+    label: "Link",
+    href: "/#primary",
+  },
+  BackgroundImageComponent: (props) => (
+    <img 
+      {...props}
+      alt={"A real view of a cabin"}
+      src={
+        "https://via.placeholder.com/984x464"
+      }
+    />
+  ),
+  ImageComponent: (props) => (
+    <img
+      {...props}
+      alt="A real view of a cabin"
+      src="https://via.placeholder.com/492x327"
+      width={492} 
+      height={327}
+    />
+  ),
+};
+
 export const Reversed = Template.bind({});
 Reversed.args = {
   heading: "Hello Topo",

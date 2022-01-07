@@ -1,5 +1,7 @@
 import React from "react";
 import { styled } from "../../stitches.config";
+import Button from '../Button';
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Wrapper from "../Wrapper";
 
 export interface IFeatureHighlightProps {
@@ -18,6 +20,7 @@ export interface IFeatureHighlightProps {
 export default function FeatureHighlight({ 
   heading,
   body,
+  link,
   BackgroundImageComponent,
   ImageComponent,
   reversed = false,
@@ -31,6 +34,12 @@ export default function FeatureHighlight({
           <Text reversed={reversed}>
             <h2>{heading}</h2>
             <p>{body}</p>
+            {link && link.href && 
+              <Button as="a" type="link" href="https://creators.mirror.xyz/-lNPJRz2GLWIcsuMTZqklGNEWRrY7Nk0Y33Qn6Lw4q4"
+              leftIcon={<ArrowRightIcon />}>
+                {link.label ? link.label : "Learn more"}
+              </Button>
+            }
           </Text>
           <Frame>
             <ImageComponent className="image" />
@@ -90,6 +99,9 @@ const Content = styled('div', {
   p: {
     lineHeight: 1.6,
     mb: 0,
+  },
+  a: {
+    mt: '$2',
   },
   '@md': {
     py: '$32',
