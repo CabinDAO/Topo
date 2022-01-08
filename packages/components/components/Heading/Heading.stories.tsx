@@ -10,95 +10,33 @@ export default {
   argTypes: {},
 } as Meta;
 
-export const Primary: Story = (args) => (
+export const Level1: Story = (args) => (
   <Box>
     <Heading {...args}>A decentralized city built by creators, for creators</Heading>
-    <Heading as="h2" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h3" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h4" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h5" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h6" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
   </Box>
 );
-Primary.args = {}
-
-export const Secondary: Story = (args) => (
-  <Box>
-    <Heading {...args}>A decentralized city built by creators, for creators</Heading>
-    <Heading as="h2" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h3" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h4" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h5" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h6" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-  </Box>
-);
-Secondary.args = {
-  type: "secondary"
+Level1.args = {
+  level: "1",
 }
 
-export const Tertiary: Story = (args) => (
+export const Level2: Story = (args) => (
   <Box>
-    <Heading {...args}>A decentralized city built by creators, for creators</Heading>
-    <Heading as="h2" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h3" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h4" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h5" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h6" {...args}>
+    <Heading {...args}>
       A decentralized city built by creators, for creators
     </Heading>
   </Box>
 );
-Tertiary.args = {
-  type: "tertiary"
+Level2.args = {
+  level: "2",
 }
-export const Accent: Story = (args) => (
+
+export const Level3: Story = (args) => (
   <Box>
-    <Heading {...args}>A decentralized city built by creators, for creators</Heading>
-    <Heading as="h2" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h3" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h4" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h5" {...args}>
-      A decentralized city built by creators, for creators
-    </Heading>
-    <Heading as="h6" {...args}>
+    <Heading {...args}>
       A decentralized city built by creators, for creators
     </Heading>
   </Box>
 );
-Accent.args = {
-  type: "accent"
+Level3.args = {
+  level: "3",
 }
