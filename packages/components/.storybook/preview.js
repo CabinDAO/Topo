@@ -15,6 +15,16 @@ const Preview = styled("div", {
   backgroundColor: '$sand',
   p: "$10",
   br: "$1",
+  "*": {
+    boxSizing: "border-box",
+  },
+  a:{
+    color: "inherit",
+    textDecoration: "none",
+    "&:hover": {
+      cursor: "pointer",
+    }
+  }
 });
 
 export const parameters = {
