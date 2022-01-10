@@ -31,6 +31,8 @@ export const theme = {
     tertiary: "$wheat",
     accent1: "$sprout",
     accent2: "$sky",
+    white: "#ffffff",
+    black: "#000000",
   },
   space: {
     ...spacing,
