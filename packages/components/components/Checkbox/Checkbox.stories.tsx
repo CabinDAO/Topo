@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
+import { Story, ArgTypes } from "@storybook/react";
 import Checkbox from "./Checkbox";
 import { Box } from "../";
 import Label from "../Label";
@@ -9,8 +9,8 @@ import { styled } from "../../stitches.config";
 export default {
   title: "Forms/Checkbox",
   component: Checkbox,
-  argTypes: {},
   args: {
+    checked: true,
     required: false,
     error: null,
   },
@@ -23,12 +23,19 @@ const InputRow = styled("div", {
   columnGap: "$3",
 });
 
-const Template: Story = ({ label, inputLabel, ...args }) => (
-  <Box>
+const Template: Story = ({ label, inputLabel, checked, ...args }) => (
+  <Box css={{ display: "flex", flexDirection: "column", gap: "$4" }}>
     <Label label={label} required={args.required}>
       <InputRow>
-        <Checkbox {...args} id="checkbox" />{" "}
+        <Checkbox {...args} id="checkbox" />
         <label htmlFor="checkbox">{inputLabel}</label>
+      </InputRow>
+    </Label>
+
+    <Label label={`Controlled ${label}`} required={args.required}>
+      <InputRow>
+        <Checkbox {...args} id="checkbox" checked={checked} />
+        <label htmlFor="checkbox">{inputLabel} controlled</label>
       </InputRow>
     </Label>
   </Box>

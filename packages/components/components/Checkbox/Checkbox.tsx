@@ -1,60 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
-import { CheckIcon } from "@radix-ui/react-icons";
 import { styled } from "../../stitches.config";
 
 const StyledBox = styled(RadixCheckbox.Root, {
   backgroundColor: "transparent",
   borderWidth: 1,
-  borderColor: "transparent",
+  borderColor: "$wheat",
+  borderStyle: "solid",
   padding: 0,
   width: 24,
   height: 24,
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  defaultVariants: {
-    checkDisplay: "unchecked",
+  "&[disabled]": {
+    backgroundColor: "#FFEED9",
   },
-  variants: {
-    disabledClick: {
-      true: {
-        backgroundColor: "#FFEED9",
-      },
-    },
-    checkDisplay: {
-      checked: {
-        backgroundColor: "$forest",
-        borderColor: "$forest",
-      },
-      unchecked: {
-        borderColor: "$wheat",
-        borderStyle: "solid",
-      },
-    },
+  "&[data-state=checked]": {
+    backgroundColor: "$forest",
+    borderColor: "$forest",
+    color: "$sand",
+  },
+  "&[data-state=checked][disabled]": {
+    backgroundColor: "$wheat",
+    borderColor: "$wheat",
+    color: "$sand",
   },
 });
 
 const Check = styled(RadixCheckbox.Indicator, {
   width: 14,
   height: 14,
-  backgroundColor: "$forest",
-  color: "$sand",
 });
 
 export interface CheckboxProps
   extends Omit<RadixCheckbox.CheckboxProps, "css"> {}
 const Checkbox = (props: CheckboxProps) => {
-  const [checked, setChecked] = useState(props.checked ?? false);
   return (
-    <StyledBox
-      {...props}
-      disabledClick={props.disabled}
-      checkDisplay={checked ? "checked" : "unchecked"}
-      onCheckedChange={(checkState) =>
-        setChecked(checkState === "indeterminate" || checkState)
-      }
-    >
+    <StyledBox {...props}>
       <Check>
         <svg
           width="14"
