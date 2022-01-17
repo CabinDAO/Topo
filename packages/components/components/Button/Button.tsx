@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { styled } from "../../stitches.config";
 
 export interface IButtonProps {
@@ -14,13 +14,20 @@ export interface IButtonProps {
   onClick?: (e: React.MouseEvent) => void;
 }
 
-const Button = ({ leftIcon, rightIcon, children, as = "button", ...props }: IButtonProps) => {
-  return <ButtonContainer as={as} {...props}>
-    {leftIcon && <Icon left>{leftIcon}</Icon>}
-    {children}
-    {rightIcon && <Icon right>{rightIcon}</Icon>}
-  </ButtonContainer>
-}
+const Button = forwardRef<HTMLButtonElement>(
+  (
+    { leftIcon, rightIcon, children, as = "button", ...props }: IButtonProps,
+    ref
+  ) => {
+    return (
+      <ButtonContainer as={as} ref={ref} {...props}>
+        {leftIcon && <Icon left>{leftIcon}</Icon>}
+        {children}
+        {rightIcon && <Icon right>{rightIcon}</Icon>}
+      </ButtonContainer>
+    );
+  }
+);
 
 const ButtonContainer = styled("button", {
   display: "inline-flex",
@@ -43,16 +50,16 @@ const ButtonContainer = styled("button", {
     type: {
       primary: {
         border: "none",
-        height: '$10',
+        height: "$10",
         py: 0,
-        px: '$4',
+        px: "$4",
       },
       secondary: {
         borderStyle: "solid",
         borderWidth: "1px",
-        height: '$10',
+        height: "$10",
         py: 0,
-        px: '$4',
+        px: "$4",
       },
       link: {
         borderStyle: "solid",
@@ -64,15 +71,13 @@ const ButtonContainer = styled("button", {
       icon: {
         border: "none",
         p: 0,
-        height: '$8',
-        width: '$8',
+        height: "$8",
+        width: "$8",
       },
     },
     tone: {
-      forest: {
-      },
-      wheat: {
-      },
+      forest: {},
+      wheat: {},
     },
     disabled: {
       true: {
@@ -168,20 +173,20 @@ const ButtonContainer = styled("button", {
 });
 
 const Icon = styled("div", {
-  height: '$5',
+  height: "$5",
   svg: {
-    height: '$5',
-    width: '$5',
+    height: "$5",
+    width: "$5",
   },
   variants: {
     left: {
       true: {
-        mr: '$2',
+        mr: "$2",
       },
     },
     right: {
       true: {
-        ml: '$2',
+        ml: "$2",
       },
     },
   },
