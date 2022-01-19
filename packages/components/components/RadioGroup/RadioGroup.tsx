@@ -48,7 +48,7 @@ const InputRow = styled("div", {
   marginBottom: '$1'
 });
 
-interface RadioProps extends Omit<RadixRadioGroup.RadioGroupItemProps, "css"> {
+export interface RadioProps extends Omit<RadixRadioGroup.RadioGroupItemProps, "css"> {
   inputLabel: string | null | undefined
 }
 export const Radio = (props: RadioProps) => {
@@ -72,7 +72,7 @@ export const Radio = (props: RadioProps) => {
   );
 };
 
-interface RadioGroupProps extends Omit<RadixRadioGroup.RadioGroupProps, "css"> {}
+export interface RadioGroupProps extends Omit<RadixRadioGroup.RadioGroupProps, "css"> {}
 
 export const RadioGroup = (props: RadioGroupProps) => (
   <RadixRadioGroup.Root {...props}>
@@ -81,3 +81,4 @@ export const RadioGroup = (props: RadioGroupProps) => (
     </>
   </RadixRadioGroup.Root>
 );
+export default RadioGroup;
