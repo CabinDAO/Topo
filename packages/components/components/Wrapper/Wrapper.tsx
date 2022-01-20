@@ -1,9 +1,5 @@
-import { styled } from "../../stitches.config";
 import React from "react";
-
-const Wrapper: React.FC = ({ children }) => {
-  return <Container>{children}</Container>;
-};
+import { styled } from "../../stitches.config";
 
 const Container = styled("div", {
   width: "100%",
@@ -11,5 +7,9 @@ const Container = styled("div", {
   mx: "auto",
   px: "$5",
 });
+
+const Wrapper: React.FC = ({ children }) => {
+  return <Container>{children}</Container>;
+};
 
 export default Wrapper;

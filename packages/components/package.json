@@ -17,7 +17,15 @@
     "@storybook/react": "^6.4.1",
     "@types/react": "^17.0.37",
     "@types/react-portal": "^4.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8.4.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -43,6 +51,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build": "build-storybook -o public",
+    "lint": "eslint . --ext .ts,.tsx",
+    "prebuild:npm": "npm run lint",
     "build:npm": "rollup -c"
   },
   "files": [

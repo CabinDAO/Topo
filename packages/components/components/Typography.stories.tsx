@@ -1,16 +1,14 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import { styled } from "../stitches.config";
-import { theme } from "@cabindao/topo-theme";
-import { Box, Text, Heading } from "./";
+import { Box, Text, Heading } from ".";
 
 export default {
   title: "Tokens/Typography",
   argTypes: {},
 } as Meta;
 
-export const Typography: Story = (args) => (
+export const Typography: Story = () => (
   <Box css={{ width: "100%" }}>
     <Box css={{ display: "flex", justifyContent: "space-between", mb: "$20" }}>
       <Box css={{ maxWidth: "35%"}}>

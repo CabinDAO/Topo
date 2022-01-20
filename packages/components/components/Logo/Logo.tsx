@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import React, { CSSProperties, useMemo } from "react";
+import React, { CSSProperties } from "react";
 
 type Sizes = "sm" | "md" | "lg" | "xl";
 type Colors = "sand" | "sprout" | "wheat" | "forest";
@@ -123,7 +123,6 @@ interface LogoProps {
   box?: boolean;
   className?: string;
   color?: Colors;
-  css?: any;
   height?: number;
   size?: Sizes;
   style?: CSSProperties;
@@ -132,12 +131,11 @@ interface LogoProps {
 }
 const Logo = ({
   box,
-  className,
   color,
-  css,
   size = "lg",
-  style,
   variant = "logomark",
+  className: _,
+  style: __,
   ...props
 }: LogoProps) => {
   if (variant === "token") {
