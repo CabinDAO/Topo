@@ -1,4 +1,4 @@
-name: Push Extensions From PR
+name: Lint
 on: pull_request
 
 jobs:
@@ -12,5 +12,7 @@ jobs:
           node-version: 14.17.6
       - name: install
         run: npm install
+        working-directory: packages/components
       - name: Lint
         run: npm run lint
+        working-directory: packages/components
