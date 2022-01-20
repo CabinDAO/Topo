@@ -113,6 +113,7 @@ export const Select = (props: ISelectProps) => {
    */
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
 
+    // If component is disabled, ignore value changes.
     if (props.disabled) {
       return;
     }
