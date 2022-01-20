@@ -19,6 +19,7 @@ import Modal from "./Modal";
 import { RadioGroup, Radio } from "./RadioGroup";
 import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
+import Select from "./Select";
 
 // prettier-ignore
 export {
@@ -37,6 +38,7 @@ export {
   Hero,
   Input,
   Label,
+  Select,
 
   Modal,
   Navigation,
