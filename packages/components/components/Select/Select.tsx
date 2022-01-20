@@ -40,10 +40,16 @@ const ListItem = styled("li", {
   }
 });
 
+//Select component option props.
+export interface ISelectOptionProps {
+  key: string,
+  label: string
+}
+
 //Select component props.
 export interface ISelectProps {
   disabled: boolean,
-  options: {key: string, label: string}[],
+  options: ISelectOptionProps[],
   label?: string,
   description?: string;
   required?: boolean;
@@ -57,20 +63,11 @@ export interface ISelectProps {
 
 export const Select = (props: ISelectProps) => {
 
-  let initialValue = "";
+  const initialValue = props.value || props.defaultValue || "";
   let options = props.options;
   let displayValue = "";
 
   const [isOpen, setIsOpen] = useState(false);
-
-  // If defaultValue is provided, initialize with it
-  if (props.defaultValue) {
-    initialValue = props.defaultValue;
-  }
-  // If value  is provided, initialize with it
-  if (props.value) {
-    initialValue = props.value;
-  }
 
   // If either value or defaultValue is provided, we search for the corresponding option.
   if (initialValue) {
@@ -87,7 +84,7 @@ export const Select = (props: ISelectProps) => {
    * 2) Show selected value in input container
    * 3) Call the client provided onChange prop
    */
-  const onOptionClicked = (val: any) => () => {
+  const onOptionClicked = (val: ISelectOptionProps) => () => {
     setIsOpen(false);
     setValue(val.label);
     if (props.onChange) {
@@ -114,7 +111,7 @@ export const Select = (props: ISelectProps) => {
   /* 
    * When value in the input box is changed, we filter the valid options.
    */
-  const changeValue = (e: any) => {
+  const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
 
     if (props.disabled) {
       return;
@@ -123,8 +120,8 @@ export const Select = (props: ISelectProps) => {
     setIsOpen(true);
     e.preventDefault();
     setValue(e.target.value);
-    let options = props.options.filter(option => option.label.toLowerCase().startsWith(e.target.value.toLowerCase()));
-    let optionElems = options.map(option => (
+    const options = props.options.filter(option => option.label.toLowerCase().startsWith(e.target.value.toLowerCase()));
+    const optionElems = options.map(option => (
       <ListItem onClick={onOptionClicked(option)} key={option.key}>
           {option.label}
       </ListItem>
