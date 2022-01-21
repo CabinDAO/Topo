@@ -68,6 +68,7 @@ export const Radio = (props: RadioProps) => {
         </Check>
       </StyledRadio>
       <Label 
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore TODO
         disabled={props.disabled}
       >{props.inputLabel}</Label>
