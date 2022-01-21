@@ -71,7 +71,7 @@ export const Select = (props: ISelectProps) => {
 
   // If either value or defaultValue is provided, we search for the corresponding option.
   if (initialValue) {
-    let selectedOptionObj = options.find(option => (option.key === initialValue));
+    const selectedOptionObj = options.find(option => (option.key === initialValue));
     if (selectedOptionObj) {
       displayValue = selectedOptionObj.label
     }

@@ -15,7 +15,7 @@ const ColorBlock = styled("div", {
   width: "$20",
 });
 
-export const Colors: Story = args => (
+export const Colors: Story = () => (
   <Box>
     <Box css={{ display: "flex" }}>
       <Box>

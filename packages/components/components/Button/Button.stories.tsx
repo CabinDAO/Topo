@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Button, { IButtonProps } from "./Button";
+import Button from "./Button";
 import { Box, Heading } from "../";
-import { ArrowRightIcon, ArrowLeftIcon, StarIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default {
   title: "Components/Button",

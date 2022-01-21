@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Textarea, { ITextareaProps } from "./Textarea";
-import { Box, Heading } from "../";
+import Textarea from "./Textarea";
+import { Box } from "../";
 
 export default {
   title: "Forms/Textarea",

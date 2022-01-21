@@ -72,7 +72,7 @@ export const Radio = (props: RadioProps) => {
   );
 };
 
-export interface RadioGroupProps extends Omit<RadixRadioGroup.RadioGroupProps, "css"> {}
+export type RadioGroupProps = Omit<RadixRadioGroup.RadioGroupProps, "css">;
 
 export const RadioGroup = (props: RadioGroupProps) => (
   <RadixRadioGroup.Root {...props}>

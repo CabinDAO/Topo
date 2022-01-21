@@ -33,8 +33,8 @@ const Check = styled(RadixCheckbox.Indicator, {
   height: 14,
 });
 
-export interface CheckboxProps
-  extends Omit<RadixCheckbox.CheckboxProps, "css"> {}
+export type CheckboxProps = Omit<RadixCheckbox.CheckboxProps, "css">;
+
 const Checkbox = (props: CheckboxProps) => {
   return (
     <StyledBox {...props}>

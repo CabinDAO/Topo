@@ -30,6 +30,7 @@ export {
   Blurb,
   Box,
   Button,
+  CallToAction,
   Checkbox,
   ConvertKit,
   FeatureHighlight,

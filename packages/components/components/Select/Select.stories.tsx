@@ -14,7 +14,7 @@ export default {
     required: false,
     error: null,
     placeholder: "Placeholder text",
-    options: [{key:"oranges",label:"Oranges"},{key:"apples",label:"Apples"},{key:"pineapples",label:"Pineapples"},,{key:"pears",label:"Pears"}]
+    options: [{key:"oranges",label:"Oranges"},{key:"apples",label:"Apples"},{key:"pineapples",label:"Pineapples"},{key:"pears",label:"Pears"}]
   },
 } as Meta;
 

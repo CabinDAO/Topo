@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
-import { Story, ArgTypes } from "@storybook/react";
+import { Story } from "@storybook/react";
 import Checkbox from "./Checkbox";
 import { Box } from "../";
 import Label from "../Label";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import FeatureHighlight, { IFeatureHighlightProps } from "./FeatureHighlight";
+import FeatureHighlight from "./FeatureHighlight";
 import { Box } from "../";
 
 export default {
