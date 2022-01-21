@@ -1,4 +1,4 @@
-name: Lint
+name: Lint & Build
 on: pull_request
 
 jobs:
@@ -16,3 +16,7 @@ jobs:
       - name: Lint
         run: npm run lint
         working-directory: packages/components
+      - name: build theme
+        run: yarn workspace @cabindao/topo-theme build:npm
+      - name: build
+        run: yarn workspace @cabindao/topo build:npm

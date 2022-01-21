@@ -67,7 +67,10 @@ export const Radio = (props: RadioProps) => {
           </svg>
         </Check>
       </StyledRadio>
-      <Label disabled={props.disabled}>{props.inputLabel}</Label>
+      <Label 
+        // @ts-ignore TODO
+        disabled={props.disabled}
+      >{props.inputLabel}</Label>
     </InputRow>
   );
 };
