@@ -30,7 +30,7 @@ const StyledRadio = styled(RadixRadioGroup.Item, {
 });
 
 const Label = styled('label', {
-  "&[disabled]": {
+  "&.radio-disabled": {
     color: "#b3b3b3",
   },
 });
@@ -68,9 +68,7 @@ export const Radio = (props: RadioProps) => {
         </Check>
       </StyledRadio>
       <Label 
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore TODO
-        disabled={props.disabled}
+        className={props.disabled ? 'radio-disabled' : ''}
       >{props.inputLabel}</Label>
     </InputRow>
   );
