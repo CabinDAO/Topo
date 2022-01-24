@@ -12,7 +12,8 @@ jobs:
           node-version: 14.17.6
       - name: install
         run: npm install
-        working-directory: packages/components
+      - name: yarn
+        run: yarn
       - name: Lint
         run: npm run lint
         working-directory: packages/components
