@@ -82,11 +82,11 @@ const Modal: React.FC<{
     setLoading(true);
     const result = onConfirm?.();
     if (result) {
-      result.then(close).catch(() => {
-        // TODO: show error somewhere
+      result.then(close).finally(() => {
         setLoading(false);
       });
     } else {
+      setLoading(false);
       close();
     }
   }, [onConfirm, close, setLoading]);
