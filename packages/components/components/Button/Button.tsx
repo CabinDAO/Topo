@@ -16,11 +16,16 @@ export interface IButtonProps {
 
 const Button = forwardRef<HTMLButtonElement, IButtonProps>(
   (
-    { leftIcon, rightIcon, children, as = "button", ...props },
+    { leftIcon, rightIcon, children, as = "button", onClick, ...props },
     ref
   ) => {
     return (
-      <ButtonContainer as={as} ref={ref} {...props}>
+      <ButtonContainer
+        as={as}
+        ref={ref}
+        onClick={(e: React.MouseEvent) => !props.disabled && onClick && onClick(e)}
+        {...props}
+      >
         {leftIcon && <Icon left>{leftIcon}</Icon>}
         {children}
         {rightIcon && <Icon right>{rightIcon}</Icon>}
@@ -83,6 +88,9 @@ const ButtonContainer = styled("button", {
       true: {
         opacity: "0.75",
         cursor: "not-allowed",
+        "&:hover": {
+          boxShadow: "none",
+        },
       },
     },
   },

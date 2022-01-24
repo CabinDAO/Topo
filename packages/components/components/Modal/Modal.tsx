@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { Portal } from "react-portal";
 import Button from "../Button";
 import { Cross1Icon } from "@radix-ui/react-icons";
@@ -52,6 +52,7 @@ const ModalFooter = styled("div", { display: "flex", justifyContent: "right" });
 const ConfirmButton = styled(Button, {
   marginLeft: 32,
 });
+const Loading = styled("span", { marginRight: "8px", fontFamily: "$sans" });
 
 const Modal: React.FC<{
   title: string;
@@ -67,6 +68,7 @@ const Modal: React.FC<{
   confirmText = "Submit",
   onConfirm,
 }) => {
+  const [loading, setLoading] = useState(false);
   const close = useCallback(() => setIsOpen(false), [setIsOpen]);
   const onContainerKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -77,13 +79,17 @@ const Modal: React.FC<{
     [close]
   );
   const onConfirmClick = useCallback(() => {
+    setLoading(true);
     const result = onConfirm?.();
     if (result) {
-      result.then(close);
+      result.then(close).finally(() => {
+        setLoading(false);
+      });
     } else {
+      setLoading(false);
       close();
     }
-  }, [onConfirm, close]);
+  }, [onConfirm, close, setLoading]);
   return isOpen ? (
     <Portal>
       <ModalRoot>
@@ -99,13 +105,15 @@ const Modal: React.FC<{
             <ModalContent>
               {children}
               <ModalFooter>
-                <Button onClick={close} type="secondary">
+                {loading && <Loading>Loading...</Loading>}
+                <Button onClick={close} type="secondary" disabled={loading}>
                   Cancel
                 </Button>
                 <ConfirmButton
                   onClick={onConfirmClick}
                   type="primary"
                   tone="wheat"
+                  disabled={loading}
                 >
                   {confirmText}
                 </ConfirmButton>
