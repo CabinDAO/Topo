@@ -19,18 +19,66 @@ const spacing = {
   64: "16rem",
 };
 
+const green = {
+  100: "#E0FFE5",
+  200: "#A2FFB3",
+  300: "#4FFF79",
+  400: "#00FF47",
+  500: "#06DF59",
+  600: "#03AB5B",
+  700: "#06774C",
+  800: "#324841",
+  900: "#1D2B2A",
+}
+
+const blue = {
+  100: "#ECF9FF",
+  200: "#D0EFFF",
+  300: "#ACE1FF",
+  400: "#90C5E3",
+  500: "#77A9C7",
+  600: "#507996",
+  700: "#324E65",
+  800: "#263A4D",
+  900: "#192634",
+}
+
+const yellow = {
+  100: "#FDF3E7",
+  200: "#FEE9CB",
+  300: "#FED7A2",
+  400: "#FDC67B",
+  500: "#DEAE6A",
+  600: "#AD844C",
+  700: "#7B5E35",
+  800: "#493922",
+  900: "#17120B",
+}
+
+const red = {
+  100: "#FBEDE6",
+  200: "#F6DACD",
+  300: "#EBB5A6",
+  400: "#E0907E",
+  500: "#D97763",
+  600: "#CE523C",
+  700: "#A43725",
+  800: "#6B2115",
+  900: "#310B05",
+}
+
 export const theme = {
   colors: {
-    forest: "#324841",
-    sand: "#FDF3E7",
-    wheat: "#FDC67B",
-    sprout: "#00FF47",
-    sky: "#ACE1FF",
-    primary: "$forest",
-    secondary: "$sand",
-    tertiary: "$wheat",
-    accent1: "$sprout",
-    accent2: "$sky",
+    forest: green[800],
+    sprout: green[400],
+    night: green[900],
+    sky: blue[300],
+    sand: yellow[100],
+    wheat: yellow[400],
+    green,
+    blue,
+    yellow,
+    red,
   },
   space: {
     ...spacing,
