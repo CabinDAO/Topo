@@ -59,7 +59,7 @@ const Modal: React.FC<{
   isOpen: boolean;
   setIsOpen: (b: boolean) => void;
   confirmText?: string;
-  onConfirm?: () => void | Promise<void>;
+  onConfirm?: () => void | Promise<void> | boolean | Promise<boolean>;
 }> = ({
   title,
   isOpen,
@@ -81,13 +81,17 @@ const Modal: React.FC<{
   const onConfirmClick = useCallback(() => {
     setLoading(true);
     const result = onConfirm?.();
-    if (result) {
-      result.then(close).finally(() => {
-        setLoading(false);
-      });
+    if (typeof result === "object") {
+      result
+        .then((keepAlive) => !keepAlive && close())
+        .finally(() => {
+          setLoading(false);
+        });
     } else {
       setLoading(false);
-      close();
+      if (!result) {
+        close();
+      }
     }
   }, [onConfirm, close, setLoading]);
   return isOpen ? (

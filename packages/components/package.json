@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Components for the CabinDAO design system",
   "main": "index.js",
   "module": "lib/index.js",
