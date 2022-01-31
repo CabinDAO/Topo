@@ -60,6 +60,7 @@ const Modal: React.FC<{
   setIsOpen: (b: boolean) => void;
   confirmText?: string;
   onConfirm?: () => void | Promise<void> | boolean | Promise<boolean>;
+  onCancel?: () => void | boolean;
 }> = ({
   title,
   isOpen,
@@ -67,6 +68,7 @@ const Modal: React.FC<{
   children,
   confirmText = "Submit",
   onConfirm,
+  onCancel,
 }) => {
   const [loading, setLoading] = useState(false);
   const close = useCallback(() => setIsOpen(false), [setIsOpen]);
@@ -94,6 +96,12 @@ const Modal: React.FC<{
       }
     }
   }, [onConfirm, close, setLoading]);
+  const onCancelClick = useCallback(() => {
+    const result = onCancel?.();
+    if (!result) {
+      close();
+    }
+  }, [onCancel, close]);
   return isOpen ? (
     <Portal>
       <ModalRoot>
@@ -110,7 +118,7 @@ const Modal: React.FC<{
               {children}
               <ModalFooter>
                 {loading && <Loading>Loading...</Loading>}
-                <Button onClick={close} type="secondary" disabled={loading}>
+                <Button onClick={onCancelClick} type="secondary" disabled={loading}>
                   Cancel
                 </Button>
                 <ConfirmButton
