@@ -19,5 +19,6 @@
     "jsx": "react"
   },
   "include": ["components"],
+  "files": ["types.d.ts"],
   "exclude": ["node_modules", "lib"]
 }
