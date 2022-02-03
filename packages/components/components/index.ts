@@ -20,6 +20,7 @@ import { RadioGroup, Radio } from "./RadioGroup";
 import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
 import Select from "./Select";
+import Toast from "./Toast";
 
 // prettier-ignore
 export {
@@ -40,6 +41,7 @@ export {
   Input,
   Label,
   Select,
+  Toast,
 
   Modal,
   Navigation,
