@@ -21,34 +21,76 @@ const Template: Story = (args) => (
 
 export const Standard = Template.bind({});
 Standard.args = {
+  children: <div>Made with care by Cabin.</div>,
   links: [
-    { 
-      label: "Wiki", 
-      href: "https://app.clarity.so/%E2%82%A1ABIN" 
+    {
+      label: "Wiki",
+      href: "https://app.clarity.so/%E2%82%A1ABIN",
     },
-    { 
-      label: "Mirror", 
-      href: "https://creators.mirror.xyz/" 
+    {
+      label: "Mirror",
+      href: "https://creators.mirror.xyz/",
     },
-    { 
-      label: "Discord", 
-      href: "https://discord.gg/N6hVmFygjR" 
+    {
+      label: "Discord",
+      href: "https://discord.gg/N6hVmFygjR",
     },
-    { 
-      label: "Snapshot", 
-      href: "https://snapshot.org/#/cabindao.eth" 
+    {
+      label: "Snapshot",
+      href: "https://snapshot.org/#/cabindao.eth",
     },
-    { 
-      label: "Github", 
-      href: "https://github.com/CabinDAO" 
+    {
+      label: "Github",
+      href: "https://github.com/CabinDAO",
     },
-    { 
-      label: "Twitter", 
-      href: "https://twitter.com/creatorcabins" 
+    {
+      label: "Twitter",
+      href: "https://twitter.com/creatorcabins",
     },
-    { 
-      label: "Instagram", 
-      href: "https://www.instagram.com/creatorcabins/" 
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/creatorcabins/",
     },
   ],
+};
+
+export const Empty = Template.bind({});
+
+export const LinksOnly = Template.bind({});
+LinksOnly.args = {
+  links: [
+    {
+      label: "Wiki",
+      href: "https://app.clarity.so/%E2%82%A1ABIN",
+    },
+    {
+      label: "Mirror",
+      href: "https://creators.mirror.xyz/",
+    },
+    {
+      label: "Discord",
+      href: "https://discord.gg/N6hVmFygjR",
+    },
+    {
+      label: "Snapshot",
+      href: "https://snapshot.org/#/cabindao.eth",
+    },
+    {
+      label: "Github",
+      href: "https://github.com/CabinDAO",
+    },
+    {
+      label: "Twitter",
+      href: "https://twitter.com/creatorcabins",
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/creatorcabins/",
+    },
+  ],
+};
+
+export const ChildrenOnly = Template.bind({});
+ChildrenOnly.args = {
+  children: <div>Made with care by Cabin.</div>,
 };
