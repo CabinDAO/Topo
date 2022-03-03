@@ -29,7 +29,7 @@ const green = {
   700: "#06774C",
   800: "#324841",
   900: "#1D2B2A",
-}
+};
 
 const blue = {
   100: "#ECF9FF",
@@ -41,7 +41,7 @@ const blue = {
   700: "#324E65",
   800: "#263A4D",
   900: "#192634",
-}
+};
 
 const yellow = {
   100: "#FDF3E7",
@@ -53,7 +53,7 @@ const yellow = {
   700: "#7B5E35",
   800: "#493922",
   900: "#17120B",
-}
+};
 
 const red = {
   100: "#FBEDE6",
@@ -65,7 +65,12 @@ const red = {
   700: "#A43725",
   800: "#6B2115",
   900: "#310B05",
-}
+};
+
+const spreadGradient = (color: Record<number, string>, prefix: string) =>
+  Object.fromEntries(
+    Object.entries(color).map(([k, v]) => [`${prefix}${k}`, v])
+  );
 
 export const theme = {
   colors: {
@@ -75,10 +80,10 @@ export const theme = {
     sky: blue[300],
     sand: yellow[100],
     wheat: yellow[400],
-    green,
-    blue,
-    yellow,
-    red,
+    ...spreadGradient(green, "green"),
+    ...spreadGradient(blue, "blue"),
+    ...spreadGradient(yellow, "yellow"),
+    ...spreadGradient(red, "red"),
   },
   space: {
     ...spacing,
@@ -106,7 +111,7 @@ export const theme = {
     regular: 500,
     bold: 600,
     bolder: 700,
-    boldest: 800
+    boldest: 800,
   },
   borderWidths: {
     px: "1px",

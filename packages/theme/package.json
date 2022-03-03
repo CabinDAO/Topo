@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Topo theme for the CabinDAO design system",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
