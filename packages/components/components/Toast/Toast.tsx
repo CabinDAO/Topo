@@ -11,9 +11,27 @@ const ToastRoot = styled("div", {
   position: "fixed",
   display: "flex",
   left: "24px",
-  bottom: "24px",
+  right: "24px",
   justifyContent: "center",
   alignItems: "center",
+  variants: {
+    verticalPosition: {
+      TOP: {
+        top: "24px",
+      },
+      BOTTOM: {
+        bottom: "24px",
+      },
+    },
+    horizontalPosition: {
+      LEFT: {
+        justifyContent: "left",
+      },
+      RIGHT: {
+        justifyContent: "right",
+      },
+    },
+  },
 });
 
 const Icons = {
@@ -106,6 +124,9 @@ const StatusFooter = styled("div", {
   },
 });
 
+type VERTICAL_POSITION = "BOTTOM" | "TOP";
+type HORIZONTAL_POSITION = "LEFT" | "RIGHT";
+
 const Toast = ({
   actions = [],
   autoHideDuration = 5000,
@@ -113,6 +134,7 @@ const Toast = ({
   isOpen,
   message,
   onClose,
+  position = "BOTTOM",
   showCloseIcon = false,
   title,
 }: {
@@ -122,6 +144,7 @@ const Toast = ({
   isOpen: boolean;
   message: React.ReactNode;
   onClose: () => void;
+  position?: `${VERTICAL_POSITION}${`_${HORIZONTAL_POSITION}` | ""}`;
   showCloseIcon?: boolean;
   title?: React.ReactNode;
 }) => {
@@ -227,6 +250,10 @@ const Toast = ({
     return null;
   }
   const Icon = Icons[intent];
+  const [verticalPosition, horizontalPosition] = position.split("_") as [
+    VERTICAL_POSITION,
+    HORIZONTAL_POSITION
+  ];
 
   return (
     <ToastRoot
@@ -235,6 +262,8 @@ const Toast = ({
       onMouseEnter={handlePause}
       onMouseLeave={handleResume}
       ref={nodeRef}
+      verticalPosition={verticalPosition}
+      horizontalPosition={horizontalPosition}
     >
       <ToastContent intent={intent}>
         <ToastMain>

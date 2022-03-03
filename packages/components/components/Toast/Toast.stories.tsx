@@ -31,8 +31,8 @@ const Template: Story<Parameters<typeof Toast>[0]> = (args) => {
     <Box
       css={{ width: "100%", display: "flex", justifyContent: "space-between" }}
     >
-      <ToastTemplate type={"primary"} intent={"success"} {...args} />
-      <ToastTemplate type={"link"} intent={"warning"} {...args} />
+      <ToastTemplate type={"primary"} intent={"success"} position="TOP_LEFT" {...args} />
+      <ToastTemplate type={"link"} intent={"warning"} position="BOTTOM_RIGHT" {...args} />
       <ToastTemplate type={"secondary"} intent={"error"} {...args} />
     </Box>
   );
