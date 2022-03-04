@@ -21,6 +21,7 @@ import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
 import Select from "./Select";
 import Toast from "./Toast";
+export * from "../stitches.config";
 
 // prettier-ignore
 export {
