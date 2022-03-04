@@ -55,12 +55,14 @@ const ConfirmButton = styled(Button, {
 const Loading = styled("span", { marginRight: "8px", fontFamily: "$sans" });
 
 const Modal: React.FC<{
-  title: string;
+  title: React.ReactNode;
   isOpen: boolean;
   setIsOpen: (b: boolean) => void;
   confirmText?: string;
   onConfirm?: () => void | Promise<void> | boolean | Promise<boolean>;
   onCancel?: () => void | boolean;
+  disabled?: boolean;
+  hideCloseIcon?: boolean;
 }> = ({
   title,
   isOpen,
@@ -69,6 +71,8 @@ const Modal: React.FC<{
   confirmText = "Submit",
   onConfirm,
   onCancel,
+  disabled = false,
+  hideCloseIcon,
 }) => {
   const [loading, setLoading] = useState(false);
   const close = useCallback(() => setIsOpen(false), [setIsOpen]);
@@ -110,22 +114,28 @@ const Modal: React.FC<{
           <ModalBody>
             <ModalHeader>
               <ModalTitle>{title}</ModalTitle>
-              <Button tone="wheat" onClick={close} type="icon">
-                <CloseIcon />
-              </Button>
+              {!hideCloseIcon && (
+                <Button tone="wheat" onClick={close} type="icon">
+                  <CloseIcon />
+                </Button>
+              )}
             </ModalHeader>
             <ModalContent>
               {children}
               <ModalFooter>
                 {loading && <Loading>Loading...</Loading>}
-                <Button onClick={onCancelClick} type="secondary" disabled={loading}>
+                <Button
+                  onClick={onCancelClick}
+                  type="secondary"
+                  disabled={loading}
+                >
                   Cancel
                 </Button>
                 <ConfirmButton
                   onClick={onConfirmClick}
                   type="primary"
                   tone="wheat"
-                  disabled={loading}
+                  disabled={disabled || loading}
                 >
                   {confirmText}
                 </ConfirmButton>
