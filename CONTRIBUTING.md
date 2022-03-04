@@ -12,7 +12,7 @@
 
 ## How to Contribute
 1. You need to get approved for a component/bounty by requesting it on the [bounty board](https://app.clarity.so/cabin/view/9849fa0e-9cd6-4805-bcce-5928bd633b07). Request the bounty by asking in the comments of the bounty.
-2. Once approved, you can fork the repo and make a branch named after your feature for your changes. When you're done you can request to merge your branch into the main repo.
+2. Once approved, you can fork the repo and make a branch named after your feature for your changes. When you're done you can request to merge your branch into the main repo using a pull request.
 
 ## Using Hygen
 Hygen is a tool we use for scaffolding out components. If you're creating a new component, create the component like so:
