@@ -11,7 +11,7 @@
 4. Now you're ready to request bounties! Check out [#110 Write SETUP.md for Topo](https://app.clarity.so/cabin/work/110) as a possible task to take on. 
 
 ## How to Contribute
-1. You need to get approved for a component/bounty by requesting it on the [bounty board](https://app.clarity.so/cabin/view/9849fa0e-9cd6-4805-bcce-5928bd633b07). Request the bounty by asking in the comments of the bounty.
+1. You need to get approved for a component/bounty by requesting it on the [bounty board](hhttps://app.clarity.so/cabin/view/b06b6487-3625-41d7-8d6e-2f7a1fd32061). Request the bounty by asking in the comments of the bounty.
 2. Once approved, you can fork the repo and make a branch named after your feature for your changes. When you're done you can request to merge your branch into the main repo using a pull request.
 
 ## Using Hygen
