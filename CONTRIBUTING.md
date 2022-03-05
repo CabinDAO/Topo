@@ -8,7 +8,7 @@
 
 3. You then need to onboard into the Product Guild by following the instructions in the Product Guild [#start-here](https://discord.com/channels/849304522500210709/936372031874818168) channel.
 
-4. Now you're ready to request bounties! Check out [#110 Write SETUP.md for Topo](https://app.clarity.so/cabin/view/9849fa0e-9cd6-4805-bcce-5928bd633b07) as a possible task to take on. 
+4. Now you're ready to request bounties! Check out [#110 Write SETUP.md for Topo](https://app.clarity.so/cabin/work/110) as a possible task to take on. 
 
 ## How to Contribute
 1. You need to get approved for a component/bounty by requesting it on the [bounty board](https://app.clarity.so/cabin/view/9849fa0e-9cd6-4805-bcce-5928bd633b07). Request the bounty by asking in the comments of the bounty.
