@@ -134,72 +134,66 @@ export const theme = {
 };
 
 const utils = {
-  p: (value: CSSProperties) => ({
-    paddingTop: value,
-    paddingBottom: value,
-    paddingLeft: value,
-    paddingRight: value,
-  }),
-  pt: (value: CSSProperties) => ({
+  pt: (value: string | number) => ({
     paddingTop: value,
   }),
-  pr: (value: CSSProperties) => ({
+  pr: (value: string | number) => ({
     paddingRight: value,
   }),
-  pb: (value: CSSProperties) => ({
+  pb: (value: string | number) => ({
     paddingBottom: value,
   }),
-  pl: (value: CSSProperties) => ({
+  pl: (value: string | number) => ({
     paddingLeft: value,
   }),
-  px: (value: CSSProperties) => ({
+  px: (value: string | number) => ({
     paddingLeft: value,
     paddingRight: value,
   }),
-  py: (value: CSSProperties) => ({
+  py: (value: string | number) => ({
     paddingTop: value,
     paddingBottom: value,
   }),
 
-  m: (value: CSSProperties) => ({
+  m: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
     marginLeft: value,
     marginRight: value,
   }),
-  mt: (value: CSSProperties) => ({
+  mt: (value: string | number) => ({
     marginTop: value,
   }),
-  mr: (value: CSSProperties) => ({
+  mr: (value: string | number) => ({
     marginRight: value,
   }),
-  mb: (value: CSSProperties) => ({
+  mb: (value: string | number) => ({
     marginBottom: value,
   }),
-  ml: (value: CSSProperties) => ({
+  ml: (value: string | number) => ({
     marginLeft: value,
   }),
-  mx: (value: CSSProperties) => ({
+  mx: (value: string | number) => ({
     marginLeft: value,
     marginRight: value,
   }),
-  my: (value: CSSProperties) => ({
+  my: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
   }),
 
-  ta: (value: CSSProperties) => ({ textAlign: value }),
+  ta: (value: CSSProperties["textAlign"]) => ({ textAlign: value }),
 
-  fd: (value: CSSProperties) => ({ flexDirection: value }),
-  fw: (value: CSSProperties) => ({ flexWrap: value }),
+  fd: (value: CSSProperties["flexDirection"]) => ({ flexDirection: value }),
+  fw: (value: CSSProperties["flexWrap"]) => ({ flexWrap: value }),
 
-  ai: (value: CSSProperties) => ({ alignItems: value }),
-  ac: (value: CSSProperties) => ({ alignContent: value }),
-  jc: (value: CSSProperties) => ({ justifyContent: value }),
-  as: (value: CSSProperties) => ({ alignSelf: value }),
-  fg: (value: CSSProperties) => ({ flexGrow: value }),
-  fs: (value: CSSProperties) => ({ flexShrink: value }),
-  fb: (value: CSSProperties) => ({ flexBasis: value }),
+  ai: (value: CSSProperties["alignItems"]) => ({ alignItems: value }),
+  ac: (value: CSSProperties["alignContent"]) => ({ alignContent: value }),
+  jc: (value: CSSProperties["justifyContent"]) => ({ justifyContent: value }),
+  as: (value: CSSProperties["alignSelf"]) => ({ alignSelf: value }),
+  fg: (value: CSSProperties["flexGrow"]) => ({ flexGrow: value }),
+  fs: (value: CSSProperties["flexShrink"]) => ({ flexShrink: value }),
+  fb: (value: CSSProperties["flexBasis"]) => ({ flexBasis: value }),
 
   bc: (value: keyof typeof theme["colors"] | string) => ({
     backgroundColor: value,
@@ -221,15 +215,15 @@ const utils = {
     borderTopLeftRadius: value,
   }),
 
-  bs: (value: CSSProperties) => ({ boxShadow: value }),
+  bs: (value: string | number) => ({ boxShadow: value }),
 
-  lh: (value: CSSProperties) => ({ lineHeight: value }),
+  lh: (value: string | number) => ({ lineHeight: value }),
 
-  ox: (value: CSSProperties) => ({ overflowX: value }),
-  oy: (value: CSSProperties) => ({ overflowY: value }),
+  ox: (value: string | number) => ({ overflowX: value }),
+  oy: (value: string | number) => ({ overflowY: value }),
 
-  pe: (value: CSSProperties) => ({ pointerEvents: value }),
-  us: (value: CSSProperties) => ({ userSelect: value }),
+  pe: (value: string | number) => ({ pointerEvents: value }),
+  us: (value: string | number) => ({ userSelect: value }),
 
   linearGradient: () => ({
     backgroundImage: `linear-gradient({value})`,
