@@ -1,9 +1,9 @@
 import React from "react";
 import {Meta} from "@storybook/react/types-6-0";
 import HandleTag from "./HandleTag";
-import {Box} from "../";
+import Box from "../Box";
 import { Story } from "@storybook/react";
-import { theme } from "@cabindao/topo-theme";
+import { theme } from "../../stitches.config";
 
 export default {
   title: "Components/HandleTag",

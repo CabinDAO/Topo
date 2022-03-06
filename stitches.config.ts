@@ -74,7 +74,7 @@ const spreadGradient = (color: Record<number, string>, prefix: string) =>
     Object.entries(color).map(([k, v]) => [`${prefix}${k}`, v])
   );
 
-const theme = {
+export const theme = {
   colors: {
     forest: green[800],
     sprout: green[400],
