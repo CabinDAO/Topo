@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from "../packages/components/stitches.config";
+import { styled } from "../stitches.config";
 
 export const decorators = [
   (Story) => (
