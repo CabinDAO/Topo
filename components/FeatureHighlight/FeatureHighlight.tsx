@@ -98,7 +98,7 @@ const Content = styled('div', {
   },
   p: {
     lineHeight: 1.6,
-    mb: 0,
+    marginBottom: 0,
   },
   a: {
     mt: '$2',

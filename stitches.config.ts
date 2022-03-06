@@ -1,3 +1,5 @@
+import { createStitches, CSSProperties } from "@stitches/react";
+
 const spacing = {
   px: "1px",
   0: "0px",
@@ -131,118 +133,115 @@ export const theme = {
   },
 };
 
-export const utils = {
-  p: (value: any) => ({
-    paddingTop: value,
-    paddingBottom: value,
-    paddingLeft: value,
-    paddingRight: value,
-  }),
-  pt: (value: any) => ({
+const utils = {
+  pt: (value: string | number) => ({
     paddingTop: value,
   }),
-  pr: (value: any) => ({
+  pr: (value: string | number) => ({
     paddingRight: value,
   }),
-  pb: (value: any) => ({
+  pb: (value: string | number) => ({
     paddingBottom: value,
   }),
-  pl: (value: any) => ({
+  pl: (value: string | number) => ({
     paddingLeft: value,
   }),
-  px: (value: any) => ({
+  px: (value: string | number) => ({
     paddingLeft: value,
     paddingRight: value,
   }),
-  py: (value: any) => ({
+  py: (value: string | number) => ({
     paddingTop: value,
     paddingBottom: value,
   }),
 
-  m: (value: any) => ({
+  m: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
     marginLeft: value,
     marginRight: value,
   }),
-  mt: (value: any) => ({
+  mt: (value: string | number) => ({
     marginTop: value,
   }),
-  mr: (value: any) => ({
+  mr: (value: string | number) => ({
     marginRight: value,
   }),
-  mb: (value: any) => ({
+  mb: (value: string | number) => ({
     marginBottom: value,
   }),
-  ml: (value: any) => ({
+  ml: (value: string | number) => ({
     marginLeft: value,
   }),
-  mx: (value: any) => ({
+  mx: (value: string | number) => ({
     marginLeft: value,
     marginRight: value,
   }),
-  my: (value: any) => ({
+  my: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
   }),
 
-  ta: (value: any) => ({ textAlign: value }),
+  ta: (value: CSSProperties["textAlign"]) => ({ textAlign: value }),
 
-  fd: (value: any) => ({ flexDirection: value }),
-  fw: (value: any) => ({ flexWrap: value }),
+  fd: (value: CSSProperties["flexDirection"]) => ({ flexDirection: value }),
+  fw: (value: CSSProperties["flexWrap"]) => ({ flexWrap: value }),
 
-  ai: (value: any) => ({ alignItems: value }),
-  ac: (value: any) => ({ alignContent: value }),
-  jc: (value: any) => ({ justifyContent: value }),
-  as: (value: any) => ({ alignSelf: value }),
-  fg: (value: any) => ({ flexGrow: value }),
-  fs: (value: any) => ({ flexShrink: value }),
-  fb: (value: any) => ({ flexBasis: value }),
+  ai: (value: CSSProperties["alignItems"]) => ({ alignItems: value }),
+  ac: (value: CSSProperties["alignContent"]) => ({ alignContent: value }),
+  jc: (value: CSSProperties["justifyContent"]) => ({ justifyContent: value }),
+  as: (value: CSSProperties["alignSelf"]) => ({ alignSelf: value }),
+  fg: (value: CSSProperties["flexGrow"]) => ({ flexGrow: value }),
+  fs: (value: CSSProperties["flexShrink"]) => ({ flexShrink: value }),
+  fb: (value: CSSProperties["flexBasis"]) => ({ flexBasis: value }),
 
-  bc: (value: keyof typeof theme["colors"] | (string & {})) => ({
+  bc: (value: keyof typeof theme["colors"] | string) => ({
     backgroundColor: value,
   }),
 
-  br: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  br: (value: keyof typeof theme["radii"] | string) => ({
     borderRadius: value,
   }),
-  btrr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  btrr: (value: keyof typeof theme["radii"] | string) => ({
     borderTopRightRadius: value,
   }),
-  bbrr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  bbrr: (value: keyof typeof theme["radii"] | string) => ({
     borderBottomRightRadius: value,
   }),
-  bblr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  bblr: (value: keyof typeof theme["radii"] | string) => ({
     borderBottomLeftRadius: value,
   }),
-  btlr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  btlr: (value: keyof typeof theme["radii"] | string) => ({
     borderTopLeftRadius: value,
   }),
 
-  bs: (value: any) => ({ boxShadow: value }),
+  bs: (value: string | number) => ({ boxShadow: value }),
 
-  lh: (value: any) => ({ lineHeight: value }),
+  lh: (value: string | number) => ({ lineHeight: value }),
 
-  ox: (value: any) => ({ overflowX: value }),
-  oy: (value: any) => ({ overflowY: value }),
+  ox: (value: string | number) => ({ overflowX: value }),
+  oy: (value: string | number) => ({ overflowY: value }),
 
-  pe: (value: any) => ({ pointerEvents: value }),
-  us: (value: any) => ({ userSelect: value }),
+  pe: (value: string | number) => ({ pointerEvents: value }),
+  us: (value: string | number) => ({ userSelect: value }),
 
-  // size: (value: keyof typeof theme['sizes'] | (string & {})) => ({
-  //   width: value,
-  //   height: value,
-  // }),
-
-  linearGradient: (value: any) => ({
+  linearGradient: () => ({
     backgroundImage: `linear-gradient({value})`,
   }),
 };
 
-export const media = {
+const media = {
   sm: "(min-width: 640px)",
   md: "(min-width: 768px)",
   lg: "(min-width: 1024px)",
   xl: "(min-width: 1280px)",
   xxl: "(min-width: 1536px)",
 };
+
+export const { styled, css, getCssText, keyframes, globalCss } = createStitches(
+  {
+    theme,
+    utils,
+    media,
+  }
+);
