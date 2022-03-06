@@ -15,9 +15,6 @@ jobs:
       - name: yarn
         run: yarn
       - name: Lint
-        run: npm run lint
-        working-directory: packages/components
-      - name: build theme
-        run: yarn workspace @cabindao/topo-theme build:npm
+        run: yarn lint
       - name: build
-        run: yarn workspace @cabindao/topo build:npm
+        run: yarn build:npm
