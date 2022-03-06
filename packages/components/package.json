@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo",
-  "version": "0.4.1",
+  "version": "0.4.4",
   "description": "Components for the CabinDAO design system",
   "main": "index.js",
   "module": "lib/index.js",
@@ -37,7 +37,7 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "@cabindao/topo-theme": "^0.0.6",
+    "@cabindao/topo-theme": "^0.1.1",
     "@radix-ui/react-checkbox": "^0.1.4",
     "@radix-ui/react-icons": "^1.0.3",
     "@radix-ui/react-radio-group": "^0.1.4",
