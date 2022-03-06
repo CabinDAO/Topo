@@ -1,3 +1,5 @@
+import { createStitches } from "@stitches/react";
+
 const spacing = {
   px: "1px",
   0: "0px",
@@ -72,7 +74,7 @@ const spreadGradient = (color: Record<number, string>, prefix: string) =>
     Object.entries(color).map(([k, v]) => [`${prefix}${k}`, v])
   );
 
-export const theme = {
+const theme = {
   colors: {
     forest: green[800],
     sprout: green[400],
@@ -131,7 +133,7 @@ export const theme = {
   },
 };
 
-export const utils = {
+const utils = {
   p: (value: any) => ({
     paddingTop: value,
     paddingBottom: value,
@@ -229,20 +231,23 @@ export const utils = {
   pe: (value: any) => ({ pointerEvents: value }),
   us: (value: any) => ({ userSelect: value }),
 
-  // size: (value: keyof typeof theme['sizes'] | (string & {})) => ({
-  //   width: value,
-  //   height: value,
-  // }),
-
   linearGradient: (value: any) => ({
     backgroundImage: `linear-gradient({value})`,
   }),
 };
 
-export const media = {
+const media = {
   sm: "(min-width: 640px)",
   md: "(min-width: 768px)",
   lg: "(min-width: 1024px)",
   xl: "(min-width: 1280px)",
   xxl: "(min-width: 1536px)",
 };
+
+export const { styled, css, getCssText, keyframes, globalCss } = createStitches(
+  {
+    theme,
+    utils,
+    media,
+  }
+);
