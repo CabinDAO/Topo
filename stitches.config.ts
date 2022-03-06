@@ -1,4 +1,4 @@
-import { createStitches } from "@stitches/react";
+import { createStitches, CSSProperties } from "@stitches/react";
 
 const spacing = {
   px: "1px",
@@ -134,72 +134,72 @@ export const theme = {
 };
 
 const utils = {
-  p: (value: string | number) => ({
+  p: (value: CSSProperties) => ({
     paddingTop: value,
     paddingBottom: value,
     paddingLeft: value,
     paddingRight: value,
   }),
-  pt: (value: string | number) => ({
+  pt: (value: CSSProperties) => ({
     paddingTop: value,
   }),
-  pr: (value: string | number) => ({
+  pr: (value: CSSProperties) => ({
     paddingRight: value,
   }),
-  pb: (value: string | number) => ({
+  pb: (value: CSSProperties) => ({
     paddingBottom: value,
   }),
-  pl: (value: string | number) => ({
+  pl: (value: CSSProperties) => ({
     paddingLeft: value,
   }),
-  px: (value: string | number) => ({
+  px: (value: CSSProperties) => ({
     paddingLeft: value,
     paddingRight: value,
   }),
-  py: (value: string | number) => ({
+  py: (value: CSSProperties) => ({
     paddingTop: value,
     paddingBottom: value,
   }),
 
-  m: (value: string | number) => ({
+  m: (value: CSSProperties) => ({
     marginTop: value,
     marginBottom: value,
     marginLeft: value,
     marginRight: value,
   }),
-  mt: (value: string | number) => ({
+  mt: (value: CSSProperties) => ({
     marginTop: value,
   }),
-  mr: (value: string | number) => ({
+  mr: (value: CSSProperties) => ({
     marginRight: value,
   }),
-  mb: (value: string | number) => ({
+  mb: (value: CSSProperties) => ({
     marginBottom: value,
   }),
-  ml: (value: string | number) => ({
+  ml: (value: CSSProperties) => ({
     marginLeft: value,
   }),
-  mx: (value: string | number) => ({
+  mx: (value: CSSProperties) => ({
     marginLeft: value,
     marginRight: value,
   }),
-  my: (value: string | number) => ({
+  my: (value: CSSProperties) => ({
     marginTop: value,
     marginBottom: value,
   }),
 
-  ta: (value: string | number) => ({ textAlign: value }),
+  ta: (value: CSSProperties) => ({ textAlign: value }),
 
-  fd: (value: string | number) => ({ flexDirection: value }),
-  fw: (value: string | number) => ({ flexWrap: value }),
+  fd: (value: CSSProperties) => ({ flexDirection: value }),
+  fw: (value: CSSProperties) => ({ flexWrap: value }),
 
-  ai: (value: string | number) => ({ alignItems: value }),
-  ac: (value: string | number) => ({ alignContent: value }),
-  jc: (value: string | number) => ({ justifyContent: value }),
-  as: (value: string | number) => ({ alignSelf: value }),
-  fg: (value: string | number) => ({ flexGrow: value }),
-  fs: (value: string | number) => ({ flexShrink: value }),
-  fb: (value: string | number) => ({ flexBasis: value }),
+  ai: (value: CSSProperties) => ({ alignItems: value }),
+  ac: (value: CSSProperties) => ({ alignContent: value }),
+  jc: (value: CSSProperties) => ({ justifyContent: value }),
+  as: (value: CSSProperties) => ({ alignSelf: value }),
+  fg: (value: CSSProperties) => ({ flexGrow: value }),
+  fs: (value: CSSProperties) => ({ flexShrink: value }),
+  fb: (value: CSSProperties) => ({ flexBasis: value }),
 
   bc: (value: keyof typeof theme["colors"] | string) => ({
     backgroundColor: value,
@@ -221,15 +221,15 @@ const utils = {
     borderTopLeftRadius: value,
   }),
 
-  bs: (value: string | number) => ({ boxShadow: value }),
+  bs: (value: CSSProperties) => ({ boxShadow: value }),
 
-  lh: (value: string | number) => ({ lineHeight: value }),
+  lh: (value: CSSProperties) => ({ lineHeight: value }),
 
-  ox: (value: string | number) => ({ overflowX: value }),
-  oy: (value: string | number) => ({ overflowY: value }),
+  ox: (value: CSSProperties) => ({ overflowX: value }),
+  oy: (value: CSSProperties) => ({ overflowY: value }),
 
-  pe: (value: string | number) => ({ pointerEvents: value }),
-  us: (value: string | number) => ({ userSelect: value }),
+  pe: (value: CSSProperties) => ({ pointerEvents: value }),
+  us: (value: CSSProperties) => ({ userSelect: value }),
 
   linearGradient: () => ({
     backgroundImage: `linear-gradient({value})`,
