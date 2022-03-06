@@ -134,104 +134,104 @@ export const theme = {
 };
 
 const utils = {
-  p: (value: any) => ({
+  p: (value: string | number) => ({
     paddingTop: value,
     paddingBottom: value,
     paddingLeft: value,
     paddingRight: value,
   }),
-  pt: (value: any) => ({
+  pt: (value: string | number) => ({
     paddingTop: value,
   }),
-  pr: (value: any) => ({
+  pr: (value: string | number) => ({
     paddingRight: value,
   }),
-  pb: (value: any) => ({
+  pb: (value: string | number) => ({
     paddingBottom: value,
   }),
-  pl: (value: any) => ({
+  pl: (value: string | number) => ({
     paddingLeft: value,
   }),
-  px: (value: any) => ({
+  px: (value: string | number) => ({
     paddingLeft: value,
     paddingRight: value,
   }),
-  py: (value: any) => ({
+  py: (value: string | number) => ({
     paddingTop: value,
     paddingBottom: value,
   }),
 
-  m: (value: any) => ({
+  m: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
     marginLeft: value,
     marginRight: value,
   }),
-  mt: (value: any) => ({
+  mt: (value: string | number) => ({
     marginTop: value,
   }),
-  mr: (value: any) => ({
+  mr: (value: string | number) => ({
     marginRight: value,
   }),
-  mb: (value: any) => ({
+  mb: (value: string | number) => ({
     marginBottom: value,
   }),
-  ml: (value: any) => ({
+  ml: (value: string | number) => ({
     marginLeft: value,
   }),
-  mx: (value: any) => ({
+  mx: (value: string | number) => ({
     marginLeft: value,
     marginRight: value,
   }),
-  my: (value: any) => ({
+  my: (value: string | number) => ({
     marginTop: value,
     marginBottom: value,
   }),
 
-  ta: (value: any) => ({ textAlign: value }),
+  ta: (value: string | number) => ({ textAlign: value }),
 
-  fd: (value: any) => ({ flexDirection: value }),
-  fw: (value: any) => ({ flexWrap: value }),
+  fd: (value: string | number) => ({ flexDirection: value }),
+  fw: (value: string | number) => ({ flexWrap: value }),
 
-  ai: (value: any) => ({ alignItems: value }),
-  ac: (value: any) => ({ alignContent: value }),
-  jc: (value: any) => ({ justifyContent: value }),
-  as: (value: any) => ({ alignSelf: value }),
-  fg: (value: any) => ({ flexGrow: value }),
-  fs: (value: any) => ({ flexShrink: value }),
-  fb: (value: any) => ({ flexBasis: value }),
+  ai: (value: string | number) => ({ alignItems: value }),
+  ac: (value: string | number) => ({ alignContent: value }),
+  jc: (value: string | number) => ({ justifyContent: value }),
+  as: (value: string | number) => ({ alignSelf: value }),
+  fg: (value: string | number) => ({ flexGrow: value }),
+  fs: (value: string | number) => ({ flexShrink: value }),
+  fb: (value: string | number) => ({ flexBasis: value }),
 
-  bc: (value: keyof typeof theme["colors"] | (string & {})) => ({
+  bc: (value: keyof typeof theme["colors"] | string) => ({
     backgroundColor: value,
   }),
 
-  br: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  br: (value: keyof typeof theme["radii"] | string) => ({
     borderRadius: value,
   }),
-  btrr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  btrr: (value: keyof typeof theme["radii"] | string) => ({
     borderTopRightRadius: value,
   }),
-  bbrr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  bbrr: (value: keyof typeof theme["radii"] | string) => ({
     borderBottomRightRadius: value,
   }),
-  bblr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  bblr: (value: keyof typeof theme["radii"] | string) => ({
     borderBottomLeftRadius: value,
   }),
-  btlr: (value: keyof typeof theme["radii"] | (string & {})) => ({
+  btlr: (value: keyof typeof theme["radii"] | string) => ({
     borderTopLeftRadius: value,
   }),
 
-  bs: (value: any) => ({ boxShadow: value }),
+  bs: (value: string | number) => ({ boxShadow: value }),
 
-  lh: (value: any) => ({ lineHeight: value }),
+  lh: (value: string | number) => ({ lineHeight: value }),
 
-  ox: (value: any) => ({ overflowX: value }),
-  oy: (value: any) => ({ overflowY: value }),
+  ox: (value: string | number) => ({ overflowX: value }),
+  oy: (value: string | number) => ({ overflowY: value }),
 
-  pe: (value: any) => ({ pointerEvents: value }),
-  us: (value: any) => ({ userSelect: value }),
+  pe: (value: string | number) => ({ pointerEvents: value }),
+  us: (value: string | number) => ({ userSelect: value }),
 
-  linearGradient: (value: any) => ({
+  linearGradient: () => ({
     backgroundImage: `linear-gradient({value})`,
   }),
 };
