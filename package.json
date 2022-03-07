@@ -40,6 +40,7 @@
     "@radix-ui/react-checkbox": "^0.1.4",
     "@radix-ui/react-icons": "^1.0.3",
     "@radix-ui/react-radio-group": "^0.1.4",
+    "@radix-ui/react-tooltip": "^0.1.7",
     "@stitches/react": "^1.2.5",
     "hygen": "^6.1.0",
     "react-portal": "^4.2.1"
@@ -49,7 +50,8 @@
     "build": "build-storybook -o public",
     "lint": "eslint . --ext .ts,.tsx",
     "prebuild:npm": "npm run lint",
-    "build:npm": "rollup -c"
+    "build:npm": "rollup -c",
+    "component": "hygen component new"
   },
   "files": [
     "/lib"

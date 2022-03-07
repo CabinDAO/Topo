@@ -21,11 +21,13 @@ import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
 import Select from "./Select";
 import Toast from "./Toast";
+import Tooltip from "./Tooltip";
 export * from "../stitches.config";
 
 // prettier-ignore
 export {
   Heading,
+  Tooltip,
 
   Text,
 
