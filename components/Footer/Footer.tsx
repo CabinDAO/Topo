@@ -1,36 +1,32 @@
 import React from "react";
-import { styled } from "../../stitches.config";
+import {styled} from "../../stitches.config";
 import Logo from "../Logo";
+import Nav, {NavLink} from "../Nav";
 import Wrapper from "../Wrapper";
 
 export interface IFooterProps {
-  links?: { label: string; href: string }[];
+  links?: {label: string; href: string}[];
   children?: React.ReactNode;
 }
 
-export default function Footer({ links, children }: IFooterProps) {
-  const nav = (
-    <Nav>
-      {links &&
-        links.map(
-          ({ label, href }, i) =>
-            label &&
-            href && (
-              <a href={href} key={i}>
-                {label}
-              </a>
-            )
-        )}
-    </Nav>
-  );
-
+export default function Footer({links, children}: IFooterProps) {
   return (
     <Container>
       <Wrapper>
         <Content>
           <Logo size="md" color="sprout" />
           {children ? <ChildrenWrapper>{children}</ChildrenWrapper> : null}
-          <Links>{nav}</Links>
+          {links && (
+            <NavContainer>
+              <Nav>
+                {links.map(({label, href}, i) => (
+                  <NavLink href={href} key={i}>
+                    {label}
+                  </NavLink>
+                ))}
+              </Nav>
+            </NavContainer>
+          )}
         </Content>
       </Wrapper>
     </Container>
@@ -58,30 +54,8 @@ const ChildrenWrapper = styled("div", {
   marginBottom: "$4",
 });
 
-const Nav = styled("div", {
-  mt: "$6",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  fontFamily: "$mono",
-  fontSize: "$sm",
-  textTransform: "uppercase",
-  a: {
-    display: "flex",
-    height: "$10",
-    px: "$4",
-    alignItems: "center",
-    justifyContent: "center",
-    "&:hover": {
-      textDecoration: "underline",
-    },
-  },
-  "@md": {
-    flexDirection: "row",
-  },
-});
-
-const Links = styled("div", {
+const NavContainer = styled("div", {
+  marginTop: "$6",
   display: "flex",
   alignItems: "center",
   flex: 2,
