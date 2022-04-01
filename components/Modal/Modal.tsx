@@ -84,7 +84,8 @@ const Modal: React.FC<{
     },
     [close]
   );
-  const onConfirmClick = useCallback(() => {
+  const onConfirmClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
     setLoading(true);
     const result = onConfirm?.();
     if (typeof result === "object") {

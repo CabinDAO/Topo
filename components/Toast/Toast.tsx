@@ -149,9 +149,6 @@ const Toast = ({
   title?: React.ReactNode;
 }) => {
   // original inspiration: https://github.com/mui-org/material-ui/blob/bf78a4a212cb328c951a9f3590a9518c72168f5c/packages/mui-material/src/Snackbar/Snackbar.js
-  // future possible props to support:
-  // - className
-  // - position
   const timerAutoHide = useRef(0);
   const nodeRef = useRef<HTMLDivElement>(null);
 
