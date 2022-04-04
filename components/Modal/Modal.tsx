@@ -53,6 +53,7 @@ const ConfirmButton = styled(Button, {
   marginLeft: 32,
 });
 const Loading = styled("span", { marginRight: "8px", fontFamily: "$sans" });
+const ErrorMessage = styled("span", { color: "#6B2115", fontFamily: "$sans" });
 
 const Modal: React.FC<{
   title: React.ReactNode;
@@ -75,6 +76,7 @@ const Modal: React.FC<{
   hideCloseIcon,
 }) => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const close = useCallback(() => setIsOpen(false), [setIsOpen]);
   const onContainerKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -84,23 +86,37 @@ const Modal: React.FC<{
     },
     [close]
   );
-  const onConfirmClick = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-    setLoading(true);
-    const result = onConfirm?.();
-    if (typeof result === "object") {
-      result
-        .then((keepAlive) => !keepAlive && close())
-        .finally(() => {
+  const onConfirmClick = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      setLoading(true);
+      setError("");
+      try {
+        const result = onConfirm?.();
+        if (typeof result === "object") {
+          result
+            .then((keepAlive) => !keepAlive && close())
+            .catch((e) => {
+              console.error(e);
+              setError(e.message);
+            })
+            .finally(() => {
+              setLoading(false);
+            });
+        } else {
           setLoading(false);
-        });
-    } else {
-      setLoading(false);
-      if (!result) {
-        close();
+          if (!result) {
+            close();
+          }
+        }
+      } catch (e) {
+        console.error(e);
+        setError((e as Error).message);
+        setLoading(false);
       }
-    }
-  }, [onConfirm, close, setLoading]);
+    },
+    [onConfirm, close, setLoading, setError]
+  );
   const onCancelClick = useCallback(() => {
     const result = onCancel?.();
     if (!result) {
@@ -124,6 +140,7 @@ const Modal: React.FC<{
             <ModalContent>
               {children}
               <ModalFooter>
+                {error && <ErrorMessage>{error}</ErrorMessage>}
                 {loading && <Loading>Loading...</Loading>}
                 <Button
                   onClick={onCancelClick}
