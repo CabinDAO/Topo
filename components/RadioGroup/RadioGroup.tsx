@@ -10,7 +10,7 @@ const StyledRadio = styled(RadixRadioGroup.Item, {
   padding: 0,
   width: 24,
   height: 24,
-  borderRadius: '100%',
+  borderRadius: "100%",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
@@ -29,7 +29,7 @@ const StyledRadio = styled(RadixRadioGroup.Item, {
   },
 });
 
-const Label = styled('label', {
+const Label = styled("label", {
   "&.radio-disabled": {
     color: "#b3b3b3",
   },
@@ -45,13 +45,14 @@ const InputRow = styled("div", {
   flexFlow: "row wrap",
   alignItems: "center",
   columnGap: "$3",
-  marginBottom: '$1'
+  marginBottom: "$1",
 });
 
-export interface RadioProps extends Omit<RadixRadioGroup.RadioGroupItemProps, "css"> {
-  inputLabel: string | null | undefined
+export interface RadioProps
+  extends Omit<RadixRadioGroup.RadioGroupItemProps, "css"> {
+  inputLabel: string | null | undefined;
 }
-export const Radio = (props: RadioProps) => {
+export const Radio = ({ inputLabel, ...props }: RadioProps) => {
   return (
     <InputRow>
       <StyledRadio {...props}>
@@ -67,9 +68,9 @@ export const Radio = (props: RadioProps) => {
           </svg>
         </Check>
       </StyledRadio>
-      <Label 
-        className={props.disabled ? 'radio-disabled' : ''}
-      >{props.inputLabel}</Label>
+      <Label className={props.disabled ? "radio-disabled" : ""}>
+        {inputLabel}
+      </Label>
     </InputRow>
   );
 };
@@ -78,9 +79,7 @@ export type RadioGroupProps = Omit<RadixRadioGroup.RadioGroupProps, "css">;
 
 export const RadioGroup = (props: RadioGroupProps) => (
   <RadixRadioGroup.Root {...props}>
-    <>
-      {props.children}
-    </>
+    <>{props.children}</>
   </RadixRadioGroup.Root>
 );
 export default RadioGroup;
