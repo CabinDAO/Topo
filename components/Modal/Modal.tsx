@@ -64,6 +64,7 @@ const Modal: React.FC<{
   onCancel?: () => void | boolean;
   disabled?: boolean;
   hideCloseIcon?: boolean;
+  hideFooter?: boolean;
 }> = ({
   title,
   isOpen,
@@ -73,7 +74,8 @@ const Modal: React.FC<{
   onConfirm,
   onCancel,
   disabled = false,
-  hideCloseIcon,
+  hideCloseIcon = false,
+  hideFooter = false,
 }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -139,25 +141,27 @@ const Modal: React.FC<{
             </ModalHeader>
             <ModalContent>
               {children}
-              <ModalFooter>
-                {error && <ErrorMessage>{error}</ErrorMessage>}
-                {loading && <Loading>Loading...</Loading>}
-                <Button
-                  onClick={onCancelClick}
-                  type="secondary"
-                  disabled={loading}
-                >
-                  Cancel
-                </Button>
-                <ConfirmButton
-                  onClick={onConfirmClick}
-                  type="primary"
-                  tone="wheat"
-                  disabled={disabled || loading}
-                >
-                  {confirmText}
-                </ConfirmButton>
-              </ModalFooter>
+              {!hideFooter && (
+                <ModalFooter>
+                  {error && <ErrorMessage>{error}</ErrorMessage>}
+                  {loading && <Loading>Loading...</Loading>}
+                  <Button
+                    onClick={onCancelClick}
+                    type="secondary"
+                    disabled={loading}
+                  >
+                    Cancel
+                  </Button>
+                  <ConfirmButton
+                    onClick={onConfirmClick}
+                    type="primary"
+                    tone="wheat"
+                    disabled={disabled || loading}
+                  >
+                    {confirmText}
+                  </ConfirmButton>
+                </ModalFooter>
+              )}
             </ModalContent>
           </ModalBody>
         </ModalContainer>

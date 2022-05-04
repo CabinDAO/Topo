@@ -7,9 +7,10 @@ export interface ILabelProps {
   required?: boolean;
   error?: string;
   children?: React.ReactNode;
+  helpText?: string;
 }
 
-const Input = ({ label, description, required, error, children }: ILabelProps) => {
+const Input = ({ label, description, required, error, children, helpText }: ILabelProps) => {
   return (
     <Container>
       <LabelRow>
@@ -18,6 +19,7 @@ const Input = ({ label, description, required, error, children }: ILabelProps) =
       </LabelRow>
       {description && <Description>{description}</Description>}
       <ChildContainer>{children}</ChildContainer>
+      {helpText && <Help>{helpText}</Help>}
       {error && <Error>{error}</Error>}
     </Container>
   );
@@ -61,6 +63,13 @@ const ChildContainer = styled("div", {
   my: "$1",
   display: "flex",
 });
+
+const Help = styled("i", {
+  fontSize: "$sm",
+  fontFamily: "$mono",
+  fontWeight: 400,
+  opacity: "0.75"
+})
 
 const Error = styled("div", {
   fontFamily: "$sans",

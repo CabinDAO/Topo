@@ -3,26 +3,33 @@ import { styled } from "../../stitches.config";
 import Label from "../Label";
 
 type LabelProps = Parameters<typeof Label>[0];
-type InputContainerProps = Omit<Parameters<typeof InputContainer>[0], 'css' | 'error'>
+type InputContainerProps = Omit<
+  Parameters<typeof InputContainer>[0],
+  "css" | "error"
+>;
 
-export interface IInputProps extends InputContainerProps, LabelProps {
-}
+export interface IInputProps extends InputContainerProps, LabelProps {}
 
-const Input = ({ label, description, required, error, ...props }: IInputProps) => {
+const Input = ({
+  label,
+  description,
+  required,
+  error,
+  helpText,
+  ...props
+}: IInputProps) => {
   return (
-    <Label 
-      label={label} 
+    <Label
+      label={label}
       description={description}
       required={required}
       error={error}
+      helpText={helpText}
     >
-      <InputContainer 
-        {...props }
-        error={!!error}
-      />
+      <InputContainer {...props} error={!!error} />
     </Label>
   );
-}
+};
 
 const InputContainer = styled("input", {
   fontFamily: "$sans",
@@ -31,9 +38,9 @@ const InputContainer = styled("input", {
   borderStyle: "solid",
   borderWidth: "1px",
   borderColor: "$forest",
-  height: '$10',
+  height: "$10",
   py: 0,
-  px: '$3',
+  px: "$3",
   fontSize: "$base",
   color: "$forest",
   outline: "none",

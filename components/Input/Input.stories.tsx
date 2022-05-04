@@ -27,16 +27,21 @@ export const Standard = Template.bind({});
 Standard.args = {};
 
 export const Required = Template.bind({});
-Required.args = { 
+Required.args = {
   required: true,
 };
 
 export const WithDescription = Template.bind({});
-WithDescription.args = { 
+WithDescription.args = {
   description: "This is an additional description",
 };
 
 export const WithError = Template.bind({});
-WithError.args = { 
+WithError.args = {
   error: "This is an error message",
+};
+
+export const WithHelp = Template.bind({});
+WithHelp.args = {
+  helpText: "Some info explaining what this input does",
 };
