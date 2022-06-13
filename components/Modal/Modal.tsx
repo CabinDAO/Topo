@@ -62,6 +62,7 @@ const Modal: React.FC<{
   confirmText?: string;
   onConfirm?: () => void | Promise<void> | boolean | Promise<boolean>;
   onCancel?: () => void | boolean;
+  cancelText?: string;
   disabled?: boolean;
   hideCloseIcon?: boolean;
   hideFooter?: boolean;
@@ -71,6 +72,7 @@ const Modal: React.FC<{
   setIsOpen,
   children,
   confirmText = "Submit",
+  cancelText = "Cancel",
   onConfirm,
   onCancel,
   disabled = false,
@@ -145,13 +147,15 @@ const Modal: React.FC<{
                 <ModalFooter>
                   {error && <ErrorMessage>{error}</ErrorMessage>}
                   {loading && <Loading>Loading...</Loading>}
-                  <Button
-                    onClick={onCancelClick}
-                    type="secondary"
-                    disabled={loading}
-                  >
-                    Cancel
-                  </Button>
+                  {cancelText && (
+                    <Button
+                      onClick={onCancelClick}
+                      type="secondary"
+                      disabled={loading}
+                    >
+                      {cancelText}
+                    </Button>
+                  )}
                   <ConfirmButton
                     onClick={onConfirmClick}
                     type="primary"
