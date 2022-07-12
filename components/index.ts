@@ -1,3 +1,7 @@
+import Test from "./Test";
+
+import Divider from "./Divider";
+
 import Heading from "./Heading";
 import Navigation from "./Navigation";
 
@@ -16,8 +20,8 @@ import Hero from "./Hero";
 import Input from "./Input";
 import Label from "./Label";
 import Modal from "./Modal";
-import Nav, {NavLink} from "./Nav";
-import {RadioGroup, Radio} from "./RadioGroup";
+import Nav, { NavLink } from "./Nav";
+import { RadioGroup, Radio } from "./RadioGroup";
 import Textarea from "./Textarea";
 import Wrapper from "./Wrapper";
 import Select from "./Select";
@@ -27,6 +31,7 @@ export * from "../stitches.config";
 
 // prettier-ignore
 export {
+  Divider,
   Heading,
   Tooltip,
 

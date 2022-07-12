@@ -1,6 +1,6 @@
 ---
 to: components/index.ts
 inject: true
-after: export
+after: export {
 ---
   <%= name %>,

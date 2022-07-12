@@ -7,6 +7,15 @@
   "types": "lib/components/index.d.ts",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "yarn storybook",
+    "storybook": "start-storybook -p 6006",
+    "build": "build-storybook -o public",
+    "lint": "eslint . --ext .ts,.tsx",
+    "prebuild:npm": "npm run lint",
+    "build:npm": "rollup -c",
+    "component": "hygen component new"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@rollup/plugin-commonjs": "^21.0.1",
@@ -45,15 +54,5 @@
     "hygen": "^6.1.0",
     "react-portal": "^4.2.1"
   },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build": "build-storybook -o public",
-    "lint": "eslint . --ext .ts,.tsx",
-    "prebuild:npm": "npm run lint",
-    "build:npm": "rollup -c",
-    "component": "hygen component new"
-  },
-  "files": [
-    "/lib"
-  ]
+  "files": ["/lib"]
 }

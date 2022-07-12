@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { styled } from "../stitches.config";
 
 export const decorators = [
@@ -12,19 +12,22 @@ export const decorators = [
 const Preview = styled("div", {
   fontFamily: "$sans",
   color: "$forest",
-  backgroundColor: '$sand',
+  backgroundColor: "$sand",
   p: "$10",
   br: "$1",
   "*": {
     boxSizing: "border-box",
   },
-  a:{
+  body: {
+    p: 0,
+  },
+  a: {
     color: "inherit",
     textDecoration: "none",
     "&:hover": {
       cursor: "pointer",
-    }
-  }
+    },
+  },
 });
 
 export const parameters = {
@@ -35,4 +38,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};

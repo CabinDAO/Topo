@@ -1,5 +1,4 @@
 import { createStitches, CSSProperties } from "@stitches/react";
-
 const spacing = {
   px: "1px",
   0: "0px",
