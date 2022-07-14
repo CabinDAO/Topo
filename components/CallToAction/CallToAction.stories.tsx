@@ -5,7 +5,7 @@ import CallToAction from "./CallToAction";
 import { Box } from "../";
 
 export default {
-  title: "Layout/CallToAction",
+  title: "Sections/CallToAction",
   component: CallToAction,
   argTypes: {},
   args: {
@@ -20,13 +20,14 @@ export default {
 
 const Template: Story = (args) => (
   <Box>
-    <CallToAction 
+    <CallToAction
       heading=""
       primaryLink={{
         label: "",
-        href: ""
-      }} 
-      {...args} />
+        href: "",
+      }}
+      {...args}
+    />
   </Box>
 );
 

@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import { Box } from "../";
 
 export default {
-  title: "Layout/Hero",
+  title: "Sections/Hero",
   component: Hero,
   argTypes: {},
 } as Meta;

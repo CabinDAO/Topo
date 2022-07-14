@@ -5,7 +5,7 @@ import FeatureHighlight from "./FeatureHighlight";
 import { Box } from "../";
 
 export default {
-  title: "Layout/FeatureHighlight",
+  title: "Sections/FeatureHighlight",
   component: FeatureHighlight,
   argTypes: {},
 } as Meta;
@@ -23,12 +23,10 @@ Standard.args = {
   heading: "Hello Topo",
   body: "Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
   BackgroundImageComponent: (props) => (
-    <img 
+    <img
       {...props}
       alt={"A real view of a cabin"}
-      src={
-        "https://via.placeholder.com/984x464"
-      }
+      src={"https://via.placeholder.com/984x464"}
     />
   ),
   ImageComponent: (props) => (
@@ -36,7 +34,7 @@ Standard.args = {
       {...props}
       alt="A real view of a cabin"
       src="https://via.placeholder.com/492x327"
-      width={492} 
+      width={492}
       height={327}
     />
   ),
@@ -51,12 +49,10 @@ WithLink.args = {
     href: "/#primary",
   },
   BackgroundImageComponent: (props) => (
-    <img 
+    <img
       {...props}
       alt={"A real view of a cabin"}
-      src={
-        "https://via.placeholder.com/984x464"
-      }
+      src={"https://via.placeholder.com/984x464"}
     />
   ),
   ImageComponent: (props) => (
@@ -64,7 +60,7 @@ WithLink.args = {
       {...props}
       alt="A real view of a cabin"
       src="https://via.placeholder.com/492x327"
-      width={492} 
+      width={492}
       height={327}
     />
   ),
@@ -75,12 +71,10 @@ Reversed.args = {
   heading: "Hello Topo",
   body: "Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
   BackgroundImageComponent: (props) => (
-    <img 
+    <img
       {...props}
       alt={"A real view of a cabin"}
-      src={
-        "https://via.placeholder.com/984x464"
-      }
+      src={"https://via.placeholder.com/984x464"}
     />
   ),
   ImageComponent: (props) => (
@@ -88,7 +82,7 @@ Reversed.args = {
       {...props}
       alt="A real view of a cabin"
       src="https://via.placeholder.com/492x327"
-      width={492} 
+      width={492}
       height={327}
     />
   ),

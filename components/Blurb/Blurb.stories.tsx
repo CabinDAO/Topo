@@ -5,7 +5,7 @@ import Blurb from "./Blurb";
 import { Box } from "..";
 
 export default {
-  title: "Layout/Blurb",
+  title: "Sections/Blurb",
   component: Blurb,
   argTypes: {},
   args: {
@@ -16,10 +16,7 @@ export default {
 
 const Template: Story = (args) => (
   <Box>
-    <Blurb 
-      heading=""
-      body=""
-      {...args} />
+    <Blurb heading="" body="" {...args} />
   </Box>
 );
 
