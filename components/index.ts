@@ -1,3 +1,5 @@
+import Container from "./Container";
+
 import Card from "./Card";
 
 import Test from "./Test";
@@ -33,6 +35,8 @@ export * from "../stitches.config";
 
 // prettier-ignore
 export {
+  Container,
+
   Card,
 
   Divider,
