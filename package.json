@@ -1,6 +1,6 @@
 {
   "name": "@cabindao/topo",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Components for the CabinDAO design system",
   "main": "index.js",
   "module": "lib/index.js",
@@ -54,5 +54,7 @@
     "hygen": "^6.1.0",
     "react-portal": "^4.2.1"
   },
-  "files": ["/lib"]
+  "files": [
+    "/lib"
+  ]
 }
