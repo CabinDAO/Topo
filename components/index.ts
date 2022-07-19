@@ -2,8 +2,6 @@ import Container from "./Container";
 
 import Card from "./Card";
 
-import Test from "./Test";
-
 import Divider from "./Divider";
 
 import Heading from "./Heading";
