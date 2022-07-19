@@ -1,6 +1,5 @@
 import Container from "./Container";
-
-import Card from "./Card";
+import { Card, CardBody, CardHeader } from "./Card";
 
 import Divider from "./Divider";
 
@@ -36,6 +35,8 @@ export {
   Container,
 
   Card,
+  CardBody,
+  CardHeader,
 
   Divider,
   Heading,
