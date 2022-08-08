@@ -1,4 +1,4 @@
-import { styled, Text, Heading, theme} from "../../stitches.config";
+import { styled, theme } from "../../stitches.config";
 
 export const Indicator = styled("span", {
   display: "inline-block",
@@ -7,8 +7,8 @@ export const Indicator = styled("span", {
   mr: "$1",
   lineHeight: 0,
   borderRadius: 99999,
-  backgroundColor: "currentColor"
-})
+  backgroundColor: "currentColor",
+});
 
 export const Tag = styled("div", {
   display: "inline-flex",
@@ -20,41 +20,40 @@ export const Tag = styled("div", {
 
   variants: {
     tone: {
-      "forest": {
+      forest: {
         backgroundColor: "$forest",
-        color: "$wheat"
+        color: "$wheat",
       },
-      "wheat": {
+      wheat: {
         backgroundColor: "$wheat",
-        color: "$forest"
+        color: "$forest",
       },
-      "sprout": {
+      sprout: {
         backgroundColor: "$forest",
-        color: "$sprout"
+        color: "$sprout",
       },
-      "danger": {
+      danger: {
         backgroundColor: theme.colors.red200,
-        color: theme.colors.red900
+        color: theme.colors.red900,
       },
-      "warning": {
+      warning: {
         backgroundColor: theme.colors.yellow200,
-        color: theme.colors.yellow900
+        color: theme.colors.yellow900,
       },
-      "success": {
+      success: {
         backgroundColor: theme.colors.green200,
-        color: theme.colors.green900
+        color: theme.colors.green900,
       },
-      "normal": {
+      normal: {
         backgroundColor: theme.colors.blue200,
-        color: theme.colors.blue900
-      }
-    }
+        color: theme.colors.blue900,
+      },
+    },
   },
 
   defaultVariants: {
-    tone: "forest"
-  }
+    tone: "forest",
+  },
 });
 
-
-export default {Tag, Indicator}
+export default { Tag, Indicator };

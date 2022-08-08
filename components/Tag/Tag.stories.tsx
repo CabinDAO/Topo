@@ -1,8 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
 import { Tag, Indicator } from "./Tag";
-import { Box } from "../"
+import { Box } from "../";
 
 export default {
   title: "Components/Tag",
@@ -13,18 +12,39 @@ export default {
 export const Primary = () => (
   <>
     <Box>
-      <Box css={{p: "$4 $8", mb: "$6", display: "block", [`& ${Tag}`]: { mx: "$2" }}}>
-      <Tag tone="forest">Hello World</Tag>
-      <Tag tone="wheat">Hello World</Tag>
-      <Tag tone="sprout">Hello World</Tag>
+      <Box
+        css={{
+          p: "$4 $8",
+          mb: "$6",
+          display: "block",
+          [`& ${Tag}`]: { mx: "$2" },
+        }}
+      >
+        <Tag tone="forest">Hello World</Tag>
+        <Tag tone="wheat">Hello World</Tag>
+        <Tag tone="sprout">Hello World</Tag>
       </Box>
-      <Box css={{p: "$4 $8", mb: "$6", display: "block", [`& ${Tag}`]: { mx: "$2" }}}>
+      <Box
+        css={{
+          p: "$4 $8",
+          mb: "$6",
+          display: "block",
+          [`& ${Tag}`]: { mx: "$2" },
+        }}
+      >
         <Tag tone="danger">Hello World</Tag>
         <Tag tone="warning">Hello World</Tag>
         <Tag tone="success">Hello World</Tag>
         <Tag tone="normal">Hello World</Tag>
       </Box>
-      <Box css={{p: "$4 $8", mb: "$6", display: "block", [`& ${Tag}`]: { mx: "$2" }}}>
+      <Box
+        css={{
+          p: "$4 $8",
+          mb: "$6",
+          display: "block",
+          [`& ${Tag}`]: { mx: "$2" },
+        }}
+      >
         <Tag tone="danger">
           <Indicator />
           Hello World
@@ -42,6 +62,6 @@ export const Primary = () => (
           Hello World
         </Tag>
       </Box>
-  </Box>
+    </Box>
   </>
 );
