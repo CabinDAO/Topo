@@ -10,9 +10,6 @@ export const decorators = [
 ];
 
 const Preview = styled("div", {
-  fontFamily: "$sans",
-  color: "$forest",
-  backgroundColor: "$sand",
   p: "$10",
   br: "$1",
   "*": {

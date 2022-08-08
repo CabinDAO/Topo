@@ -1,3 +1,5 @@
+import {Tag, Indicator} from "./Tag";
+
 import Container from "./Container";
 import { Card, CardBody, CardHeader } from "./Card";
 
@@ -32,6 +34,9 @@ export * from "../stitches.config";
 
 // prettier-ignore
 export {
+  Tag,
+  Indicator,
+
   Container,
 
   Card,

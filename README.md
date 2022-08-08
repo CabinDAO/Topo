@@ -35,7 +35,83 @@ product. Progress, milestones, and on-going initiatives are tracked
 If you would like to contribute, start by reading the [Contribution Guide](./CONTRIBUTING.md) 
 and the [Code of Conduct](./CONDUCT.md) . Open issues can be found in this repository.
 
-## Setup
+## Setup: Getting Started
+
+*Follow these instructions to setup and use Topo in a Next.js project.*
+
+1. Install Topo:
+
+```sh
+yarn add @cabindao/topo
+```
+
+2. Set up server-side rendering:
+
+```js
+// _document.tsx
+import React from "react";
+import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import { getCssText } from "@cabindao/topo";
+
+export default class Document extends NextDocument {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <style
+            id="stitches"
+            // https://stitches.dev/docs/server-side-rendering
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+3. Set up global css:
+
+```ts
+// _app.tsx
+import { globalCss } from "@cabindao/topo";
+import type { AppProps } from "next/app";
+
+const globalStyles = globalCss({
+  body: {
+    backgroundColor: "$sand",
+  },
+  "html, body": {
+    padding: 0,
+    margin: 0,
+    fontFamily: "$sans",
+  },
+  a: {
+    color: "inherit",
+    textDecoration: "none",
+  },
+  "*": {
+    boxSizing: "border-box",
+  },
+    <ClerkProvider>
+});
+
+function MyApp({ Component, pageProps }: AppProps) {
+  globalStyles();
+  return (
+    <Component {...pageProps} />
+  );
+}
+```
+
+You should be good to go now. You can install components from Topo or Stitches
+into your project.
+
+## Contributing
 
 1. Fork the Topo repository into your Github account.
 2. Clone the forked repo to your local system.
