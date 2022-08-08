@@ -21,70 +21,65 @@ const spacing = {
 };
 
 const green = {
-  100: "#E0FFE5",
-  200: "#A2FFB3",
-  300: "#4FFF79",
-  400: "#00FF47",
-  500: "#06DF59",
-  600: "#03AB5B",
-  700: "#06774C",
-  800: "#324841",
-  900: "#1D2B2A",
+  green100: "#E0FFE5",
+  green200: "#A2FFB3",
+  green300: "#4FFF79",
+  green400: "#00FF47",
+  green500: "#06DF59",
+  green600: "#03AB5B",
+  green700: "#06774C",
+  green800: "#324841",
+  green900: "#1D2B2A",
 };
 
 const blue = {
-  100: "#ECF9FF",
-  200: "#D0EFFF",
-  300: "#ACE1FF",
-  400: "#90C5E3",
-  500: "#77A9C7",
-  600: "#507996",
-  700: "#324E65",
-  800: "#263A4D",
-  900: "#192634",
+  blue100: "#ECF9FF",
+  blue200: "#D0EFFF",
+  blue300: "#ACE1FF",
+  blue400: "#90C5E3",
+  blue500: "#77A9C7",
+  blue600: "#507996",
+  blue700: "#324E65",
+  blue800: "#263A4D",
+  blue900: "#192634",
 };
 
 const yellow = {
-  100: "#FDF3E7",
-  200: "#FEE9CB",
-  300: "#FED7A2",
-  400: "#FDC67B",
-  500: "#DEAE6A",
-  600: "#AD844C",
-  700: "#7B5E35",
-  800: "#493922",
-  900: "#17120B",
+  yellow100: "#FDF3E7",
+  yellow200: "#FEE9CB",
+  yellow300: "#FED7A2",
+  yellow400: "#FDC67B",
+  yellow500: "#DEAE6A",
+  yellow600: "#AD844C",
+  yellow700: "#7B5E35",
+  yellow800: "#493922",
+  yellow900: "#17120B",
 };
 
 const red = {
-  100: "#FBEDE6",
-  200: "#F6DACD",
-  300: "#EBB5A6",
-  400: "#E0907E",
-  500: "#D97763",
-  600: "#CE523C",
-  700: "#A43725",
-  800: "#6B2115",
-  900: "#310B05",
+  red100: "#FBEDE6",
+  red200: "#F6DACD",
+  red300: "#EBB5A6",
+  red400: "#E0907E",
+  red500: "#D97763",
+  red600: "#CE523C",
+  red700: "#A43725",
+  red800: "#6B2115",
+  red900: "#310B05",
 };
-
-const spreadGradient = (color: Record<number, string>, prefix: string) =>
-  Object.fromEntries(
-    Object.entries(color).map(([k, v]) => [`${prefix}${k}`, v])
-  );
 
 export const theme = {
   colors: {
-    forest: green[800],
-    sprout: green[400],
-    night: green[900],
-    sky: blue[300],
-    sand: yellow[100],
-    wheat: yellow[400],
-    ...spreadGradient(green, "green"),
-    ...spreadGradient(blue, "blue"),
-    ...spreadGradient(yellow, "yellow"),
-    ...spreadGradient(red, "red"),
+    forest: green["green800"],
+    sprout: green["green400"],
+    night: green["green900"],
+    sky: blue["blue300"],
+    sand: yellow["yellow100"],
+    wheat: yellow["yellow400"],
+    ...green,
+    ...blue,
+    ...yellow,
+    ...red
   },
   space: {
     ...spacing,
@@ -242,5 +237,5 @@ export const { styled, css, getCssText, keyframes, globalCss } = createStitches(
     theme,
     utils,
     media,
-  }
+  },
 );

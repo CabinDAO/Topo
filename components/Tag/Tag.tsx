@@ -1,5 +1,7 @@
 import { styled, theme } from "../../stitches.config";
 
+console.log(theme);
+
 export const Indicator = styled("span", {
   display: "inline-block",
   height: "$2",
@@ -55,5 +57,3 @@ export const Tag = styled("div", {
     tone: "forest",
   },
 });
-
-export default { Tag, Indicator };
