@@ -13,10 +13,6 @@ export const CardHeader = styled(Box, {
   padding: "$3 $5",
   [`& ${Heading}, & ${Text}`]: {
     color: "$sand",
-    textTransform: "capitalize",
-    fontFamily: "$mono",
-    fontSize: "$base",
-    fontWeight: "$light",
     m: 0,
   },
 });
