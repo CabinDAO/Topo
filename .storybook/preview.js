@@ -1,12 +1,15 @@
 import React from "react";
-import { styled } from "../stitches.config";
+import { styled, globalStyles } from "../stitches.config";
 
 export const decorators = [
-  (Story) => (
-    <Preview>
-      <Story />
-    </Preview>
-  ),
+  (Story) => {
+    globalStyles();
+    return (
+      <Preview>
+        <Story />
+      </Preview>
+    );
+  },
 ];
 
 const Preview = styled("div", {
