@@ -1,3 +1,5 @@
+import Loader from "./Loader";
+
 import { Tag, Indicator } from "./Tag";
 import Container from "./Container";
 import { Card, CardBody, CardHeader } from "./Card";
@@ -29,6 +31,8 @@ export * from "../stitches.config";
 
 // prettier-ignore
 export {
+  Loader,
+
   Tag,
   Indicator,
   Container,
