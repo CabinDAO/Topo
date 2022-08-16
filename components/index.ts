@@ -1,3 +1,5 @@
+import Flex from "./Flex";
+
 import Loader from "./Loader";
 
 import { Tag, Indicator } from "./Tag";
@@ -31,6 +33,8 @@ export * from "../stitches.config";
 
 // prettier-ignore
 export {
+  Flex,
+
   Loader,
 
   Tag,
