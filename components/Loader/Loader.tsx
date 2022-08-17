@@ -28,16 +28,15 @@ export const Loader = ({
 }: {
   progress: number;
   width?: string | number;
-    tone?: "$forest" | "$sprout" | "$night" | "$sky" | "$wheat" | "$sand"
+  tone?: "$forest" | "$sprout" | "$night" | "$sky" | "$wheat" | "$sand"
 }) => {
   const quant = Math.floor(progress / 10)
-  console.log(quant)
 
   return (
     <Box css={{ border: "2px solid", borderColor: tone, width: width, padding: "$1 $2", mb: '$2' }}>
       <Box css={{ display: "flex" }}>
         {[...Array(quant * 2)].map((_, i) => (
-          <Indicator key={i} css={{background: tone}} />
+          <Indicator key={i} css={{ background: tone }} />
         ))}
       </Box>
     </Box>
